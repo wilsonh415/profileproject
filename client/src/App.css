@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+  /* position: fixed; */
+ }
+  
+ .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+ }
+  
+ @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+ }
+  
+ .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+ }
+  
+ .App-link {
+  color: #61dafb;
+ }
+  
+ @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+ }
+  
+ .profileSidebar {
+  /* display: inline-block; */
+  height: 100vh;
+  width: 25vw;
+  background-color: lightgrey;
+  top: 0; left: 0;
+  padding-top: 2em;
+  position: fixed;
+  /* float: left; */
+ }
+  
+ .thePage {
+  /* overflow-y: auto; */
+  /* display: inline-block; */
+  /* background-image: url('./images/GrandTeton.JPG');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 200vh; */
+ }
+  
+ .bgBlock {
+  /* display: flex; */
+  background-image: url('./images/GrandTeton.JPG');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 18vw 0;
+  /* position: fixed; */
+  height: 145vh;
+  /* margin-left: 25vw; */
+  margin-left: 25vw;
+  opacity: 0.65;
+ }
+  
+  
+ .navigationBar {
+  position: fixed;
+  margin-top: 5vh;
+  margin-left: 70vw;
+  top: 0;
+  float: right;
+  /* width: 100%; */
+ }
+  
+ .profilePic {
+  margin: auto;
+  margin-bottom: 1vh;
+ }
+ 

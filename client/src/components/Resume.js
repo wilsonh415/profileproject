@@ -15,7 +15,7 @@ class Resume extends React.Component {
            fontFamily: "Georgia"
        }
        const experienceStyle = {
-           top: "77vh",
+           top: "75vh",
            marginLeft: "30vw",
            position: "absolute",
            fontFamily: "Georgia"
@@ -26,7 +26,7 @@ class Resume extends React.Component {
            marginLeft: "30vw",
        };
        const expstyles = {
-           top: "85vh",
+           top: "83vh",
            position: "absolute",
            marginLeft: "30vw"
        };
@@ -41,20 +41,23 @@ class Resume extends React.Component {
        const cardImgStyle = {
            marginLeft: "10px",
            marginTop: "10px",
+           marginRight: "10px",
            width: "120px",
            height: "120px"
        };
-       const llnlStyle = {
+       const llnlLogoStyle = {
            marginLeft: "27px",
            marginTop: "35px",
-           width: "84px",
-           height: "84px"
+           marginRight: "20px",
+           width: "76px",
+           height: "76px"
        };
        const sfoStyle = {
            marginLeft: "20px",
-           marginTop: "10px",
-           width: "100px",
-           height: "120px"
+           marginTop: "15px",
+           marginRight: "10px",
+           width: "90px",
+           height: "110px"
        };
        const subTextStyle = {
            fontFamily: "Raleway",
@@ -65,7 +68,7 @@ class Resume extends React.Component {
            fontFamily: "Raleway",
            fontSize: "15px",
            float: "left",
-           marginLeft: "22px"
+           marginLeft: "13px"
        };
        const sfoSubText = {
            fontFamily: "Raleway",
@@ -79,6 +82,19 @@ class Resume extends React.Component {
            float: "left",
            marginTop: "1.5vh"
        };
+       const lowellStyle = {
+            fontFamily: "Georgia",
+            fontSize: "20px",
+            float: "left",
+            marginTop: "2.5vh"
+        };
+        const lowellCardStyle = {
+            marginLeft: "15px",
+            marginTop: "20px",
+            marginRight: "25px",
+            width: "100px",
+            height: "100px"
+        };
        return (
            <div>
                <h2 style={educationStyle}>
@@ -103,9 +119,9 @@ class Resume extends React.Component {
                    </Card>
                    <Card style={cardStyle}>
                        <div style={{display: "flex"}}>
-                           <Card.Img variant="left" src={lowelllogo} style={cardImgStyle}/>
+                           <Card.Img variant="left" src={lowelllogo} style={lowellCardStyle}/>
                            <Card.Body>
-                               <Card.Title style={titleStyle}>
+                               <Card.Title style={lowellStyle}>
                                    <b>Lowell High School</b>
                                </Card.Title>
                                <Card.Text style={subTextStyle}>
@@ -125,7 +141,7 @@ class Resume extends React.Component {
                <div style={expstyles}>
                <Card style={cardStyle}>
                        <div style={{display: "flex"}}>
-                           <Card.Img variant="left" src={llnllogo} style={llnlStyle}/>
+                           <Card.Img variant="left" src={llnllogo} style={llnlLogoStyle}/>
                            <Card.Body>
                                <Card.Title style={{fontFamily: "Georgia", fontSize: "20px", marginLeft: "-30px", marginTop: "1.5vh"}}>
                                    <b>Lawrence Livermore National Laboratory</b>

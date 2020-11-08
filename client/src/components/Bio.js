@@ -40,11 +40,13 @@ class Bio extends React.Component {
                            <img width="30" height="30" style={{margin: "10px", marginRight: "20px"}}
                            src={gmailicon} alt="Gmail Icon"></img>
                        </a>
-                       <a href="https://github.com/wilsonh415" target="_blank">
+                       <a href="https://github.com/wilsonh415" 
+                       target="_blank" rel="noopener noreferrer">
                            <img width="30" height="30" style={{margin: "10px", marginRight: "20px"}}
                            src={githubicon} alt="Github Icon"></img>
                        </a>
-                       <a href="https://www.linkedin.com/in/wilsonhuang5/" target="_blank">
+                       <a href="https://www.linkedin.com/in/wilsonhuang5/" 
+                       target="_blank" rel="noopener noreferrer">
                            <img width="30" height="30" style={{margin: "10px"}}
                            src={linkedinicon} alt="LinkedIn Icon"></img>
                        </a>

@@ -2,7 +2,7 @@
   text-align: center;
   /* position: fixed; */
  }
-  
+ 
  .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -85,4 +85,8 @@
   margin: auto;
   margin-bottom: 1vh;
  }
- 
+
+ .leaflet-container {
+   height: 100px;
+   width: 100px;
+ }

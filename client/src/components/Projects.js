@@ -1,4 +1,5 @@
 import React from 'react';
+import Iss from './projectComponents/Iss';
  
 class Projects extends React.Component {
    render() {
@@ -9,7 +10,7 @@ class Projects extends React.Component {
        }
        return (
            <div style={styles}>
-               <h1>In the works...</h1>
+               <Iss></Iss>
            </div>
        )
    }

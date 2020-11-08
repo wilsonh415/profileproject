@@ -1,6 +1,6 @@
 import React from 'react';
 import NavbarComp from './NavbarComp';
-import { HashRouter, BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Resume from './Resume';
 import Projects from './Projects';
 import Random from './Random';

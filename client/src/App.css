@@ -49,15 +49,6 @@
   /* float: left; */
  }
   
- .thePage {
-  /* overflow-y: auto; */
-  /* display: inline-block; */
-  /* background-image: url('./images/GrandTeton.JPG');
-  background-size: cover;
-  background-attachment: fixed;
-  height: 200vh; */
- }
-  
  .bgBlock {
   /* display: flex; */
   background-image: url('./images/GrandTeton.JPG');
@@ -84,9 +75,4 @@
  .profilePic {
   margin: auto;
   margin-bottom: 1vh;
- }
-
- .leaflet-container {
-   height: 100px;
-   width: 100px;
  }

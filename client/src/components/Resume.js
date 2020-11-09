@@ -50,13 +50,17 @@ class Resume extends React.Component {
             width: "120px",
             height: "120px"
        };
+       const cpTitleStyle = {
+        fontFamily: "Georgia",
+        fontSize: "20px",
+        float: "left"
+        };
 
        // Lowell Styles
        const lowellStyle = {
         fontFamily: "Georgia",
         fontSize: "20px",
-        float: "left",
-        marginTop: "2.5vh"
+        float: "left"
         };
         const lowellCardStyle = {
             marginLeft: "20px",
@@ -102,12 +106,6 @@ class Resume extends React.Component {
             fontSize: "15px",
             float: "left"
         };
-       const titleStyle = {
-           fontFamily: "Georgia",
-           fontSize: "20px",
-           float: "left",
-           marginTop: "1.5vh"
-       };
        return (
            <div>
                <h2 style={educationStyle}>
@@ -119,7 +117,7 @@ class Resume extends React.Component {
                        <div style={{display: "flex", marginRight: "auto"}}>
                            <Card.Img variant="left" src={cplogo} style={cpLogoStyle}/>
                            <Card.Body>
-                               <Card.Title style={titleStyle}>
+                               <Card.Title style={cpTitleStyle}>
                                    <a href="https://www.calpoly.edu/" 
                                    target="_blank" rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>  
                                     <b>California Polytechnic State <br/>University, San Luis Obispo</b>
@@ -169,7 +167,7 @@ class Resume extends React.Component {
                        <div style={{display: "flex", marginRight: "auto"}}>
                            <Card.Img variant="left" src={llnllogo} style={llnlLogoStyle}/>
                            <Card.Body>
-                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px", marginTop: "1.5vh"}}>
+                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px"}}>
                                    <a href="https://www.llnl.gov/" target="_blank"
                                    rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>
                                     <b>Lawrence Livermore <br/>National Laboratory</b>
@@ -190,7 +188,7 @@ class Resume extends React.Component {
                        <div style={{display: "flex", marginRight: "auto"}}>
                            <Card.Img variant="left" src={sfologo} style={sfoLogoStyle}/>
                            <Card.Body>
-                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px", marginTop: "1.5vh"}}>
+                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px"}}>
                                    <a href="https://sfoconnect.com/" rel="noopener noreferrer"
                                    target="_blank" style={{color: "black", textDecoration: "none"}}>
                                     <b>City & County of San Francisco <br/> (SFO Airport - ITT Office)</b>

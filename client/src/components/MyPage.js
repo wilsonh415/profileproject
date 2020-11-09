@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Resume from './Resume';
 import Projects from './Projects';
 import Random from './Random';
+import Iss from './projectComponents/Iss';
  
 class MyPage extends React.Component {
    render() {
@@ -16,6 +17,7 @@ class MyPage extends React.Component {
                    <Route component={Resume} path="/Resume"></Route>
                    <Route component={Projects} path="/Projects"></Route>
                    <Route component={Random} path="/Random"></Route>
+                   <Route component={Iss} path="/Iss"></Route>
                </BrowserRouter>
            </div>
        )

@@ -8,125 +8,150 @@ import sfologo from '../images/sfologo.png';
 class Resume extends React.Component {
  
    render() {
+       // Titles & Card Placement + Style
        const educationStyle = {
            top: "10vh",
-           marginLeft: "30vw",
+           marginLeft: "31vw",
            position: "absolute",
-           fontFamily: "Georgia"
+           fontFamily: "Georgia",
+           fontSize: "28px"
        }
        const experienceStyle = {
            top: "75vh",
-           marginLeft: "30vw",
+           marginLeft: "31vw",
            position: "absolute",
-           fontFamily: "Georgia"
+           fontFamily: "Georgia",
+           fontSize: "28px"
        }
        const edustyles = {
-           top: "18vh",
+           top: "20vh",
            position: "absolute",
            marginLeft: "30vw",
        };
        const expstyles = {
-           top: "83vh",
+           top: "85vh",
            position: "absolute",
            marginLeft: "30vw"
        };
        const cardStyle = {
-           width: "37vw",
-           height: "22vh",
+           minWidth: "38vw",
+           minHeight: "22vh",
            backgroundColor: "white",
            display: "flex",
            marginBottom: "5vh",
-           borderRadius: "35px"
+           borderRadius: "35px",
+           flexDirection: "row"
        };
-       const cardImgStyle = {
-           marginLeft: "10px",
-           marginTop: "10px",
-           marginRight: "10px",
-           width: "120px",
-           height: "120px"
+       // Cal Poly Styles
+       const cpLogoStyle = {
+            marginLeft: "10px",
+            marginTop: "10px",
+            marginRight: "15px",
+            width: "120px",
+            height: "120px"
        };
+
+       // Lowell Styles
+       const lowellStyle = {
+        fontFamily: "Georgia",
+        fontSize: "20px",
+        float: "left",
+        marginTop: "2.5vh"
+        };
+        const lowellCardStyle = {
+            marginLeft: "20px",
+            marginTop: "20px",
+            marginRight: "25px",
+            width: "100px",
+            height: "100px"
+        };
+
+        // LLNL Styles
        const llnlLogoStyle = {
-           marginLeft: "27px",
+           marginLeft: "33px",
            marginTop: "35px",
-           marginRight: "20px",
-           width: "76px",
-           height: "76px"
+           marginRight: "5px",
+           width: "73px",
+           height: "73px"
        };
-       const sfoStyle = {
+       const llnlSubText = {
+        fontFamily: "Raleway",
+        fontSize: "15px",
+        float: "left",
+        marginLeft: "30px"
+        };
+
+        // SFO styles
+       const sfoLogoStyle = {
            marginLeft: "20px",
            marginTop: "15px",
            marginRight: "10px",
            width: "90px",
            height: "110px"
        };
-       const subTextStyle = {
-           fontFamily: "Raleway",
-           fontSize: "15px",
-           float: "left"
-       };
-       const llnlSubText = {
-           fontFamily: "Raleway",
-           fontSize: "15px",
-           float: "left",
-           marginLeft: "13px"
-       };
        const sfoSubText = {
            fontFamily: "Raleway",
            fontSize: "15px",
            float: "left",
-           marginLeft: "14px"
+           marginLeft: "10px"
        };
+
+       // General Styles
+       const subTextStyle = {
+            fontFamily: "Raleway",
+            fontSize: "15px",
+            float: "left"
+        };
        const titleStyle = {
            fontFamily: "Georgia",
            fontSize: "20px",
            float: "left",
            marginTop: "1.5vh"
        };
-       const lowellStyle = {
-            fontFamily: "Georgia",
-            fontSize: "20px",
-            float: "left",
-            marginTop: "2.5vh"
-        };
-        const lowellCardStyle = {
-            marginLeft: "15px",
-            marginTop: "20px",
-            marginRight: "25px",
-            width: "100px",
-            height: "100px"
-        };
        return (
            <div>
                <h2 style={educationStyle}>
                    <b>Education</b>
                </h2>
                <div style={edustyles}>
+
                    <Card style={cardStyle}>
-                       <div style={{display: "flex"}}>
-                           <Card.Img variant="left" src={cplogo} style={cardImgStyle}/>
+                       <div style={{display: "flex", marginRight: "auto"}}>
+                           <Card.Img variant="left" src={cplogo} style={cpLogoStyle}/>
                            <Card.Body>
                                <Card.Title style={titleStyle}>
-                                   <b>California Polytechnic State <br/>University, San Luis Obispo</b>
+                                   <a href="https://www.calpoly.edu/" 
+                                   target="_blank" rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>  
+                                    <b>California Polytechnic State <br/>University, San Luis Obispo</b>
+                                   </a>
                                </Card.Title>
+                               <br/>
                                <Card.Text style={subTextStyle}>
                                    San Luis Obispo, CA &nbsp; <b>|</b> &nbsp; Sep 2017 - Present
                                </Card.Text>
+                               <br/>
                                <Card.Text style={subTextStyle}>
                                    B.S. in Computer Science
                                </Card.Text>
                            </Card.Body>
                        </div>
                    </Card>
+
                    <Card style={cardStyle}>
-                       <div style={{display: "flex"}}>
+                       <div style={{display: "flex", marginRight: "auto"}}>
                            <Card.Img variant="left" src={lowelllogo} style={lowellCardStyle}/>
                            <Card.Body>
                                <Card.Title style={lowellStyle}>
-                                   <b>Lowell High School</b>
+                                   <a href="https://en.wikipedia.org/wiki/Lowell_High_School_(San_Francisco)"
+                                   target="_blank" rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>
+                                    <b>Lowell High School</b>
+                                   </a>
                                </Card.Title>
+                               <br/>
                                <Card.Text style={subTextStyle}>
                                    San Francisco, CA &nbsp; <b>|</b> &nbsp; Aug 2013 - May 2017
                                </Card.Text>
+                               <br/>
                                <Card.Text style={subTextStyle}>
                                    11 Advanced Placement Classes
                                </Card.Text>
@@ -139,32 +164,42 @@ class Resume extends React.Component {
                    <b>Work Experience</b>
                </h2>
                <div style={expstyles}>
-               <Card style={cardStyle}>
-                       <div style={{display: "flex"}}>
+
+                    <Card style={cardStyle}>
+                       <div style={{display: "flex", marginRight: "auto"}}>
                            <Card.Img variant="left" src={llnllogo} style={llnlLogoStyle}/>
                            <Card.Body>
-                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px", marginLeft: "-30px", marginTop: "1.5vh"}}>
-                                   <b>Lawrence Livermore National Laboratory</b>
+                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px", marginTop: "1.5vh"}}>
+                                   <a href="https://www.llnl.gov/" target="_blank"
+                                   rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>
+                                    <b>Lawrence Livermore <br/>National Laboratory</b>
+                                   </a>
                                </Card.Title>
                                <Card.Text style={llnlSubText}>
                                    Livermore, CA &nbsp; <b>|</b> &nbsp; Apr 2019 - Aug 2019
                                </Card.Text>
+                               <br/>
                                <Card.Text style={llnlSubText}>
                                    Computation Student Scholar
                                </Card.Text>
                            </Card.Body>
                        </div>
                    </Card>
+
                    <Card style={cardStyle}>
-                       <div style={{display: "flex"}}>
-                           <Card.Img variant="left" src={sfologo} style={sfoStyle}/>
+                       <div style={{display: "flex", marginRight: "auto"}}>
+                           <Card.Img variant="left" src={sfologo} style={sfoLogoStyle}/>
                            <Card.Body>
-                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px", marginLeft: "-30px", marginTop: "1.5vh"}}>
-                                   <b>City & County of San Francisco <br/> (SFO Airport - ITT Department)</b>
+                               <Card.Title style={{fontFamily: "Georgia", fontSize: "20px", marginTop: "1.5vh"}}>
+                                   <a href="https://sfoconnect.com/" rel="noopener noreferrer"
+                                   target="_blank" style={{color: "black", textDecoration: "none"}}>
+                                    <b>City & County of San Francisco <br/> (SFO Airport - ITT Office)</b>
+                                   </a>
                                </Card.Title>
                                <Card.Text style={sfoSubText}>
                                    San Francisco, CA &nbsp; <b>|</b> &nbsp; Jun 2017 - Aug 2017
                                </Card.Text>
+                               <br/>
                                <Card.Text style={sfoSubText}>
                                    Public Service Trainee (Software Engineering Intern)
                                </Card.Text>

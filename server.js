@@ -32,3 +32,10 @@ app.get('/api/issdata', async (request, response) => {
       response.json(null);
    }
 });
+
+app.get('/api/spacephoto', async (request, response) => {
+   const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+   const apiResp = await fetch(apiUrl);
+   const data = await apiResp.json();
+   response.json(data);
+});

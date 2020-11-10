@@ -8,7 +8,8 @@ class NavbarComp extends React.Component {
            opacity: 0.9,
            fontSize: "21px",
            marginRight: "25px",
-           fontFamily: "Palatino Linotype"
+           fontFamily: "Palatino Linotype",
+           backgroundColor: "skyblue"
        };
        return(
            <div className="navigationBar">

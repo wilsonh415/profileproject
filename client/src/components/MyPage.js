@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Resume from './Resume';
 import Projects from './Projects';
 import Random from './Random';
+import Home from './Home';
 import Iss from './projectComponents/Iss';
  
 class MyPage extends React.Component {
@@ -14,6 +15,7 @@ class MyPage extends React.Component {
                </div>
                <NavbarComp></NavbarComp>
                <BrowserRouter>
+                   <Route component={Home} exact path="/"></Route>
                    <Route component={Resume} path="/Resume"></Route>
                    <Route component={Projects} path="/Projects"></Route>
                    <Route component={Random} path="/Random"></Route>

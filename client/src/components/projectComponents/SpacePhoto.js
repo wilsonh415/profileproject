@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import 'date-fns';
 import { Card } from 'react-bootstrap';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
-import { KeyboardDatePicker, DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import moment from 'moment';
 
 class SpacePhoto extends React.Component {
     constructor() { 
@@ -11,8 +12,18 @@ class SpacePhoto extends React.Component {
         this.state = {
             spaceFoto: null,
             copyright: null,
-            selectedDate: null
+            // selectedDate: moment(),
+            stringDate: this.getDate()
         }
+    }
+
+    getDate = () => {
+        const date = new Date();
+        let dateString = new String();
+        dateString += date.getMonth() + 1;
+        dateString += '/' + date.getDate();
+        dateString += '/' + date.getFullYear();
+        return dateString;
     }
 
     async componentDidMount() {
@@ -22,19 +33,31 @@ class SpacePhoto extends React.Component {
             spaceFoto: data.hdurl,
             copyright: data.copyright
         });
-        console.log(data);
     }
 
-    selectDate = () => {
+    handleDateChange = async (data) => {
+        const date = new Date(data);
+        let dateString = new String();
+        let backendDate = new String();
+        let month = new String(date.getMonth() + 1);
+        let day = new String(date.getDate());
+        const year = new String(date.getFullYear());
+        day = (day.length === 1) ? '0' + day : day;
+        month = (month.length === 1) ? '0' + month : month;
+        dateString = month + '/' + day + '/' + year;
+        backendDate = year + '-' + month + '-' + day;
 
-    }
-
-    handleDateChange = (data) => {
-        // const date = new Date(data);
-        // console.log(date);
         this.setState({
-            selectedDate: null
+            stringDate: dateString
         });
+        if(backendDate.length === 10) {
+            const resp = await fetch(`/api/spacephoto?date=${backendDate}`);
+            const respdata = await resp.json();
+            this.setState({
+                spaceFoto: respdata.hdurl,
+                copyright: respdata.copyright
+            });
+        }
     }
 
     render() {
@@ -44,24 +67,32 @@ class SpacePhoto extends React.Component {
                 <Card.Body>
                     <Card.Title><b>NASA's astronomy photo of the day!</b></Card.Title>
                     <Card.Text>
-                    Look at today's unique space photo, image by {this.state.copyright}.
+                    Look at the astronomy photo of the day from {this.state.stringDate}.
+                    <br/> Image by: {this.state.copyright}
                     </Card.Text>
                 </Card.Body>
                 <div>
-                    <h6 style={{fontFamily: "Georgia"}}>
+                    <h6 style={{fontFamily: "Georgia", marginTop: "2vh"}}>
                         <b>
                         Select space photo from <br/>another date!
                         </b>
                     </h6>
-                    {/* <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <StrictMode>
+                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <label style={{fontSize: "10px"}}>Limited to 30 pics/hour by NASA; choose wisely!</label>
                         <KeyboardDatePicker
-                        variant="inline"
+                        style={{marginTop: "-1vh"}}
+                        margin="normal"
+                        id="date-picker-dialog"
                         format="MM/dd/yyyy"
-                        onChange={this.handleDateChange} >
-                        <DatePicker value={this.selectedDate} />
-                        </KeyboardDatePicker>
-                    </MuiPickersUtilsProvider> */}
-
+                        value={this.state.stringDate}
+                        onChange={this.handleDateChange}
+                        KeyboardButtonProps={{
+                            'aria-label': 'change date',
+                        }}
+                        />
+                    </MuiPickersUtilsProvider>
+                    </StrictMode>
                 </div>
                 
             </Card>

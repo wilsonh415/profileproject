@@ -9,7 +9,6 @@ app.listen(port, () => {
 });
 
 app.get('/', (request, response) => {
-   console.log("This works at least");
    response.send("Hello!!");
 });
 
@@ -24,7 +23,6 @@ app.get('/api/issdata', async (request, response) => {
       const apiUrl = 'https://api.wheretheiss.at/v1/satellites/25544'
       const apiResp = await fetch(apiUrl, options);
       const data = await apiResp.json();
-      console.log(data);
       response.json(data);
    }
    catch(error) {
@@ -34,8 +32,19 @@ app.get('/api/issdata', async (request, response) => {
 });
 
 app.get('/api/spacephoto', async (request, response) => {
-   const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
-   const apiResp = await fetch(apiUrl);
-   const data = await apiResp.json();
-   response.json(data);
+   // get today's photo
+   if(request.query.date === undefined) {
+      const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+      const apiResp = await fetch(apiUrl);
+      const data = await apiResp.json();
+      response.json(data);
+   }
+   // get another date's photo
+   else {
+      const reqdate = request.query.date;
+      const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${reqdate}`;
+      const apiResp = await fetch(apiUrl);
+      const data = await apiResp.json();
+      response.json(data);
+   }
 });

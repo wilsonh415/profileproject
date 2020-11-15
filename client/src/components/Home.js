@@ -5,12 +5,13 @@ class Home extends React.Component {
         const styles = {
             position: "absolute",
             marginLeft: "30vw",
-            top: "120px",
+            top: "45%",
             fontFamily: "Georgia"
         }
         return (
             <div style={styles}>
-                <h1>Welcome! Website still a work in progress.</h1>
+                <h1>Welcome! Website is still a work in progress.
+                </h1>
             </div>
         )
     }

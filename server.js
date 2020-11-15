@@ -32,9 +32,10 @@ app.get('/api/issdata', async (request, response) => {
 });
 
 app.get('/api/spacephoto', async (request, response) => {
+   const myKey = 'DEMO_KEY';
    // get today's photo
    if(request.query.date === undefined) {
-      const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+      const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${myKey}`;
       const apiResp = await fetch(apiUrl);
       const data = await apiResp.json();
       response.json(data);
@@ -42,7 +43,7 @@ app.get('/api/spacephoto', async (request, response) => {
    // get another date's photo
    else {
       const reqdate = request.query.date;
-      const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${reqdate}`;
+      const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${myKey}&date=${reqdate}`;
       const apiResp = await fetch(apiUrl);
       const data = await apiResp.json();
       response.json(data);

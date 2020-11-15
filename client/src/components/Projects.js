@@ -11,7 +11,7 @@ class Projects extends React.Component {
 
    render() {
        const styles = {
-           top: "120px",
+           top: "140px",
            position: "absolute",
            marginLeft: "30vw",
            fontFamily: "Georgia"

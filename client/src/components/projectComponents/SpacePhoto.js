@@ -1,10 +1,9 @@
 import React, { StrictMode } from 'react';
 import 'date-fns';
 import { Card } from 'react-bootstrap';
-import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import moment from 'moment';
+// import moment from 'moment';
 
 class SpacePhoto extends React.Component {
     constructor() { 
@@ -37,11 +36,11 @@ class SpacePhoto extends React.Component {
 
     handleDateChange = async (data) => {
         const date = new Date(data);
-        let dateString = new String();
-        let backendDate = new String();
-        let month = new String(date.getMonth() + 1);
-        let day = new String(date.getDate());
-        const year = new String(date.getFullYear());
+        let dateString;
+        let backendDate;
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        const year = date.getFullYear();
         day = (day.length === 1) ? '0' + day : day;
         month = (month.length === 1) ? '0' + month : month;
         dateString = month + '/' + day + '/' + year;
@@ -57,6 +56,10 @@ class SpacePhoto extends React.Component {
                 spaceFoto: respdata.hdurl,
                 copyright: respdata.copyright
             });
+            if(respdata.msg !== undefined) {
+                window.alert(respdata.msg);
+            }
+            console.log(respdata);
         }
     }
 

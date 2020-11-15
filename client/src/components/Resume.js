@@ -1,11 +1,20 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Accordion, Button } from 'react-bootstrap';
 import cplogo from '../images/cplogo.jpeg';
 import lowelllogo from '../images/lowelllogo.png';
 import llnllogo from '../images/llnllogo.jpeg';
 import sfologo from '../images/sfologo.png';
  
 class Resume extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            cpExpand: false,
+            lowellExpand: false,
+            llnlExpand: false,
+            sfoExpand: false
+        }
+    }
  
    render() {
        // Titles & Card Placement + Style
@@ -14,35 +23,37 @@ class Resume extends React.Component {
            marginLeft: "31vw",
            position: "absolute",
            fontFamily: "Georgia",
-           fontSize: "28px"
+           fontSize: "30px"
        }
        const experienceStyle = {
-           top: "75vh",
+           top: "78vh",
            marginLeft: "31vw",
            position: "absolute",
            fontFamily: "Georgia",
-           fontSize: "28px"
+           fontSize: "30px"
        }
-       const edustyles = {
-           top: "20vh",
-           position: "absolute",
-           marginLeft: "30vw",
-       };
-       const expstyles = {
-           top: "85vh",
-           position: "absolute",
-           marginLeft: "30vw"
-       };
        const cardStyle = {
-           minWidth: "38vw",
-           minHeight: "22vh",
-           backgroundColor: "white",
-           display: "flex",
-           marginBottom: "5vh",
-           borderRadius: "35px",
-           flexDirection: "row"
-       };
+            minWidth: "38vw",
+            minHeight: "22vh",
+            backgroundColor: "white",
+            display: "flex",
+            marginBottom: "5vh",
+            borderRadius: "35px",
+            flexDirection: "row",
+            marginRight: "auto"
+        };
+        const subTextStyle = {
+            fontFamily: "Raleway",
+            fontSize: "15px",
+            float: "left"
+        };
        // Cal Poly Styles
+       const cpcardlayout = {
+            top: "20vh",
+            position: "absolute",
+            marginLeft: "30vw",
+            overflow: "auto"
+       };
        const cpLogoStyle = {
             marginLeft: "10px",
             marginTop: "10px",
@@ -57,6 +68,12 @@ class Resume extends React.Component {
         };
 
        // Lowell Styles
+       const lowellcardlayout = {
+        top: "50vh",
+        position: "absolute",
+        marginLeft: "30vw",
+        overflow: "auto"
+        };
        const lowellStyle = {
         fontFamily: "Georgia",
         fontSize: "20px",
@@ -71,10 +88,15 @@ class Resume extends React.Component {
         };
 
         // LLNL Styles
+        const llnlcardlayout = {
+            top: "88vh",
+            position: "absolute",
+            marginLeft: "30vw"
+        };
        const llnlLogoStyle = {
            marginLeft: "33px",
            marginTop: "35px",
-           marginRight: "5px",
+           marginRight: "0px",
            width: "73px",
            height: "73px"
        };
@@ -82,10 +104,15 @@ class Resume extends React.Component {
         fontFamily: "Raleway",
         fontSize: "15px",
         float: "left",
-        marginLeft: "30px"
+        marginLeft: "39px"
         };
 
         // SFO styles
+        const sfocardlayout = {
+            top: "119vh",
+            position: "absolute",
+            marginLeft: "30vw"
+        };
        const sfoLogoStyle = {
            marginLeft: "20px",
            marginTop: "15px",
@@ -99,72 +126,105 @@ class Resume extends React.Component {
            float: "left",
            marginLeft: "10px"
        };
-
-       // General Styles
-       const subTextStyle = {
-            fontFamily: "Raleway",
-            fontSize: "15px",
-            float: "left"
-        };
        return (
            <div>
                <h2 style={educationStyle}>
                    <b>Education</b>
                </h2>
-               <div style={edustyles}>
-
-                   <Card style={cardStyle}>
-                       <div style={{display: "flex", marginRight: "auto"}}>
-                           <Card.Img variant="left" src={cplogo} style={cpLogoStyle}/>
-                           <Card.Body>
-                               <Card.Title style={cpTitleStyle}>
-                                   <a href="https://www.calpoly.edu/" 
-                                   target="_blank" rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>  
+               <div style={cpcardlayout}>
+                    <Accordion defaultActiveKey="0">
+                        <Card style={cardStyle}>
+                            <Card.Img variant="left" src={cplogo} style={cpLogoStyle}/>
+                            <Card.Body>
+                                <Card.Title style={cpTitleStyle}>
+                                    <a href="https://www.calpoly.edu/" 
+                                    target="_blank" rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>  
                                     <b>California Polytechnic State <br/>University, San Luis Obispo</b>
-                                   </a>
-                               </Card.Title>
-                               <br/>
-                               <Card.Text style={subTextStyle}>
-                                   San Luis Obispo, CA &nbsp; <b>|</b> &nbsp; Sep 2017 - Present
-                               </Card.Text>
-                               <br/>
-                               <Card.Text style={subTextStyle}>
-                                   B.S. in Computer Science
-                               </Card.Text>
-                           </Card.Body>
-                       </div>
-                   </Card>
-
-                   <Card style={cardStyle}>
-                       <div style={{display: "flex", marginRight: "auto"}}>
-                           <Card.Img variant="left" src={lowelllogo} style={lowellCardStyle}/>
-                           <Card.Body>
-                               <Card.Title style={lowellStyle}>
-                                   <a href="https://en.wikipedia.org/wiki/Lowell_High_School_(San_Francisco)"
-                                   target="_blank" rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>
+                                    </a>
+                                </Card.Title>
+                                <br/>
+                                <Card.Text style={subTextStyle}>
+                                    San Luis Obispo, CA &nbsp; <b>|</b> &nbsp; Sep 2017 - Present
+                                </Card.Text>
+                                <br/>
+                                <Card.Text style={subTextStyle}>
+                                    B.S. in Computer Science
+                                </Card.Text>
+                            </Card.Body>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="1" 
+                            onClick={() => this.setState({cpExpand : !this.state.cpExpand})}>
+                                <b>{this.state.cpExpand === false ? '>' : '<'}</b>
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="1">
+                                <Card.Body>
+                                    <div style={{float: "left"}}>
+                                        <b><u>Relevant Coursework:</u></b><br/>
+                                        <ul style={{fontSize: "9px", textAlign: "left"}}>
+                                            <li>Design & Implementation of Databases</li>
+                                            <li>Design & Analysis of Algorithms</li>
+                                            <li>Theory of Computation</li>
+                                            <li>Operating Systems</li>
+                                            <li>Statistics with R</li>
+                                            <li>User-Centered Interface & Design</li>
+                                            <li>Human Computer Interaction</li>
+                                            <li>OOP & Data Structures</li>
+                                        </ul>
+                                    </div>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                    </Accordion>
+                </div>
+                <div style={lowellcardlayout}>
+                   <Accordion>
+                        <Card style={cardStyle}>
+                            <Card.Img variant="left" src={lowelllogo} style={lowellCardStyle}/>
+                            <Card.Body>
+                                <Card.Title style={lowellStyle}>
+                                    <a href="https://en.wikipedia.org/wiki/Lowell_High_School_(San_Francisco)"
+                                    target="_blank" rel="noopener noreferrer" style={{color: "black", textDecoration: "none"}}>
                                     <b>Lowell High School</b>
-                                   </a>
-                               </Card.Title>
-                               <br/>
-                               <Card.Text style={subTextStyle}>
-                                   San Francisco, CA &nbsp; <b>|</b> &nbsp; Aug 2013 - May 2017
-                               </Card.Text>
-                               <br/>
-                               <Card.Text style={subTextStyle}>
-                                   11 Advanced Placement Classes
-                               </Card.Text>
-                           </Card.Body>
-                       </div>
-                   </Card>
+                                    </a>
+                                </Card.Title>
+                                <br/>
+                                <Card.Text style={subTextStyle}>
+                                    San Francisco, CA &nbsp; <b>|</b> &nbsp; Aug 2013 - May 2017
+                                </Card.Text>
+                                <br/>
+                                <Card.Text style={subTextStyle}>
+                                    11 Advanced Placement Classes
+                                </Card.Text>
+                            </Card.Body>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="1" 
+                            onClick={() => this.setState({lowellExpand : !this.state.lowellExpand})}>
+                                <b>{this.state.lowellExpand === false ? '>' : '<'}</b>
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="1">
+                                <Card.Body>
+                                    <div>
+                                        <p style={{fontSize: "9px"}}>
+                                            Lowell High School is a selective <br/>
+                                            public magnet school where admission<br/>
+                                            tests are necessary for enrollment.
+                                        </p>
+                                        <b><u>Relevant Coursework:</u></b>
+                                        <ul style={{fontSize: "9px", textAlign: "left"}}>
+                                            <li>AP Computer Science</li>
+                                            <li>AP Computer Science Principles</li>
+                                            <li>AP Psychology</li>
+                                        </ul>
+                                    </div>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                   </Accordion>
                </div>
- 
                <h2 style={experienceStyle}>
                    <b>Work Experience</b>
                </h2>
-               <div style={expstyles}>
-
-                    <Card style={cardStyle}>
-                       <div style={{display: "flex", marginRight: "auto"}}>
+               <div style={llnlcardlayout}>
+                    <Accordion>
+                        <Card style={cardStyle}>
                            <Card.Img variant="left" src={llnllogo} style={llnlLogoStyle}/>
                            <Card.Body>
                                <Card.Title style={{fontFamily: "Georgia", fontSize: "20px"}}>
@@ -181,11 +241,36 @@ class Resume extends React.Component {
                                    Computation Student Scholar
                                </Card.Text>
                            </Card.Body>
-                       </div>
-                   </Card>
-
-                   <Card style={cardStyle}>
-                       <div style={{display: "flex", marginRight: "auto"}}>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="1"
+                            onClick={() => this.setState({llnlExpand : !this.state.llnlExpand})}>
+                                <b>{this.state.llnlExpand === false ? '>' : '<'}</b>
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="1">
+                                <Card.Body>
+                                    <div>
+                                        <b><u>Responsibilities:</u></b>
+                                        <ul style={{fontSize: "10px", textAlign: "left"}}>
+                                            <li>Developed & designed a rationalization app for department<br/>
+                                                directors at the lab, which consisted of a complex updateable <br/>
+                                                ledger (table of accounting data) with the use of ag-Grid.
+                                            </li>
+                                            <li>Implemented various system features for our admin pages, some<br/>
+                                                of which included options to lock users out, post system messages,<br/>
+                                                and give updates regarding the status of our finance application.
+                                            </li>
+                                            <li>Updated and remodeled many of the finance department's <br/>
+                                                SPAs (single-page applications) from AngularJS to Angular.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                   </Accordion>
+                </div>
+                <div style={sfocardlayout}>
+                    <Accordion>
+                        <Card style={cardStyle}>
                            <Card.Img variant="left" src={sfologo} style={sfoLogoStyle}/>
                            <Card.Body>
                                <Card.Title style={{fontFamily: "Georgia", fontSize: "20px"}}>
@@ -202,8 +287,29 @@ class Resume extends React.Component {
                                    Public Service Trainee (Software Engineering Intern)
                                </Card.Text>
                            </Card.Body>
-                       </div>
-                   </Card>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="1"
+                            onClick={() => this.setState({sfoExpand : !this.state.sfoExpand})}>
+                                <b>{this.state.lowellExpand === false ? '>' : '<'}</b>
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="1">
+                                <Card.Body>
+                                    <div>
+                                        <b><u>Responsibilities:</u></b>
+                                        <ul style={{fontSize: "10px", textAlign: "left"}}>
+                                            <li>Wrote unit tests in Java and ensured code coverage for <br/>
+                                                the checkpoint wait time team with the use of Jenkins.
+                                            </li>
+                                            <li>Collected Wi-Fi access point data and developed algorithms <br/>
+                                                to determine the faulty or problematic access points.
+                                            </li>
+                                            <li>Learned about RESTful APIs and the development <br/>
+                                                of web services.</li>
+                                        </ul>
+                                    </div>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                   </Accordion>
                </div>
            </div>
        );

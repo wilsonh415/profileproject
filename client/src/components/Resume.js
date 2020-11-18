@@ -129,7 +129,7 @@ class Resume extends React.Component {
        return (
            <div>
                <h2 style={educationStyle}>
-                   <b>Education</b>
+                   <b>Educationn</b>
                </h2>
                <div style={cpcardlayout}>
                     <Accordion defaultActiveKey="0">

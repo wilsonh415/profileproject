@@ -11,15 +11,22 @@ class Projects extends React.Component {
 
    render() {
        const styles = {
-           top: "140px",
-           position: "absolute",
-           marginLeft: "30vw",
+           top: "20vh",
+           position: "relative",
+           marginLeft: "5vw",
            fontFamily: "Georgia"
-       }
+       };
+       const issCardStyle = {
+           backgroundColor: "white",
+           border: "1px solid",
+           minWidth: "286px",
+           marginBottom: "5vh",
+           minHeight: "477px"
+       };
        return (
-           <div style={styles}>
-                <Row>
-                    <Card style={{ width: '18rem', backgroundColor: "white", border: "1px solid", marginRight: "3vw"}}>
+           <div className="projectStyle">
+                <Row style={styles}>
+                    <Card style={issCardStyle}>
                         <Card.Img variant="top" src={issfoto} width={286} height={180}/>
                         <Card.Body>
                             <Card.Title><b>Where is the International Space Station (ISS)?</b></Card.Title>

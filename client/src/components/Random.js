@@ -7,13 +7,12 @@ class Random extends React.Component {
  
    render() {
        const styles = {
-           top: "100px",
-           position: "absolute",
-           marginLeft: "30vw"
+           top: "6vh",
+           position: "relative",
        }
        return (
-           <div style={styles}>
-               <h1>Coming soon...</h1>
+           <div className="randomStyle">
+               <h1 style={styles}>Coming soon...</h1>
            </div>
        );
    }

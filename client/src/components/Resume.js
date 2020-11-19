@@ -19,40 +19,45 @@ class Resume extends React.Component {
    render() {
        // Titles & Card Placement + Style
        const educationStyle = {
-           top: "10vh",
-           marginLeft: "31vw",
-           position: "absolute",
+           top: "3vh",
+           marginLeft: "6vw",
+           position: "relative",
+           float: "left",
            fontFamily: "Georgia",
-           fontSize: "30px"
+           fontSize: "30px",
+           backgroundColor: "skyblue"
        }
        const experienceStyle = {
-           top: "78vh",
-           marginLeft: "31vw",
-           position: "absolute",
+           marginLeft: "1vw",
+           marginBottom: "3vh",
+           position: "relative",
+           float: "left",
            fontFamily: "Georgia",
-           fontSize: "30px"
+           fontSize: "30px",
+           backgroundColor: "skyblue"
        }
        const cardStyle = {
             minWidth: "38vw",
             minHeight: "22vh",
             backgroundColor: "white",
-            display: "flex",
+            float: "left",
             marginBottom: "5vh",
             borderRadius: "35px",
             flexDirection: "row",
-            marginRight: "auto"
+            // maxHeight: "30vh"
         };
         const subTextStyle = {
             fontFamily: "Raleway",
             fontSize: "15px",
             float: "left"
         };
+
        // Cal Poly Styles
        const cpcardlayout = {
-            top: "20vh",
-            position: "absolute",
-            marginLeft: "30vw",
-            overflow: "auto"
+            top: "5vh",
+            position: "relative",
+            marginLeft: "5vw",
+            width: (this.state.cpExpand) ? "64vw" : "44vw"
        };
        const cpLogoStyle = {
             marginLeft: "10px",
@@ -69,10 +74,10 @@ class Resume extends React.Component {
 
        // Lowell Styles
        const lowellcardlayout = {
-        top: "50vh",
-        position: "absolute",
-        marginLeft: "30vw",
-        overflow: "auto"
+            top: "5vh",
+            position: "relative",
+            marginLeft: "5vw",
+            width: (this.state.lowellExpand) ? "64vw" : "44vw"
         };
        const lowellStyle = {
         fontFamily: "Georgia",
@@ -89,14 +94,14 @@ class Resume extends React.Component {
 
         // LLNL Styles
         const llnlcardlayout = {
-            top: "88vh",
-            position: "absolute",
-            marginLeft: "30vw"
+            top: "8vh",
+            position: "relative",
+            marginLeft: "5vw",
+            width: (this.state.llnlExpand) ? "64vw" : "44vw"
         };
        const llnlLogoStyle = {
            marginLeft: "33px",
            marginTop: "35px",
-           marginRight: "0px",
            width: "73px",
            height: "73px"
        };
@@ -109,9 +114,10 @@ class Resume extends React.Component {
 
         // SFO styles
         const sfocardlayout = {
-            top: "119vh",
-            position: "absolute",
-            marginLeft: "30vw"
+            top: "8vh",
+            position: "relative",
+            marginLeft: "5vw",
+            width: (this.state.sfoExpand) ? "64vw" : "44vw"
         };
        const sfoLogoStyle = {
            marginLeft: "20px",
@@ -127,9 +133,9 @@ class Resume extends React.Component {
            marginLeft: "10px"
        };
        return (
-           <div>
+           <div className="resumeStyle">
                <h2 style={educationStyle}>
-                   <b>Educationn</b>
+                   <b>Education</b>
                </h2>
                <div style={cpcardlayout}>
                     <Accordion defaultActiveKey="0">
@@ -219,10 +225,10 @@ class Resume extends React.Component {
                         </Card>
                    </Accordion>
                </div>
-               <h2 style={experienceStyle}>
-                   <b>Work Experience</b>
-               </h2>
                <div style={llnlcardlayout}>
+                    <h2 style={experienceStyle}>
+                        <b>Experience</b>
+                    </h2>
                     <Accordion>
                         <Card style={cardStyle}>
                            <Card.Img variant="left" src={llnllogo} style={llnlLogoStyle}/>

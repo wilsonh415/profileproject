@@ -3,14 +3,15 @@ import React from 'react';
 class Home extends React.Component {
     render() {
         const styles = {
-            position: "absolute",
-            marginLeft: "30vw",
+            position: "relative",
             top: "45%",
-            fontFamily: "Georgia"
+            fontFamily: "Georgia",
+            color: "white"
         }
         return (
-            <div style={styles}>
-                <h1>Welcome! Website is still a work in progress.
+            <div className="homeStyle">
+                <h1 style={styles}>
+                    Welcome! Website is still a work in progress.
                 </h1>
             </div>
         )

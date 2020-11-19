@@ -65,7 +65,8 @@ class SpacePhoto extends React.Component {
 
     render() {
         return (
-            <Card style={{ width: '18rem', backgroundColor: "white", border: "1px solid"}}>
+            <div className="spacePhotoStyle">
+            <Card>
                 <Card.Img variant="top" src={this.state.spaceFoto} width={286} height={180}/>
                 <Card.Body>
                     <Card.Title><b>NASA's astronomy photo of the day!</b></Card.Title>
@@ -99,6 +100,7 @@ class SpacePhoto extends React.Component {
                 </div>
                 
             </Card>
+            </div>
         )
     }
 }

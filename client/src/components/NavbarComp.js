@@ -7,7 +7,7 @@ class NavbarComp extends React.Component {
            color: "black",
            opacity: 0.9,
            fontSize: "21px",
-           marginRight: "25px",
+           marginRight: "2vw",
            fontFamily: "Palatino Linotype",
            backgroundColor: "skyblue"
        };

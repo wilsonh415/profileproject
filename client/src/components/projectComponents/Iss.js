@@ -35,10 +35,10 @@ class Iss extends React.Component {
             iconSize: [35, 35],
         });
         const styles = {
-            top: "120px",
-            position: "absolute",
-            marginLeft: "30vw",
-            fontFamily: "Georgia"
+            top: "3vh",
+            position: "relative",
+            // marginLeft: "30vw",
+            fontFamily: "Georgia",
         };
         const mapStyle = {
             marginTop: "50px",
@@ -48,30 +48,32 @@ class Iss extends React.Component {
             marginRight: "auto"
         }
         return (
-            <div style={styles}>
-                <h3>
-                    <b>Where is the International Space Station right now?
-                    </b>
-                </h3>
-                {
-                    (this.state.position === null) ? 
-                    <div>
-                        Waiting for map to load...
-                    </div> :
-                    <MapContainer center={this.state.position}
-                    zoom={2} scrollWheelZoom={false} style={mapStyle}>
-                        <TileLayer
-                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        />
-                        <Marker position={this.state.position} icon={issicon}>
-                            <Popup>
-                            Latitude: {this.state.position[0].toFixed(5)}<br/> 
-                            Longitude: {this.state.position[1].toFixed(5)}
-                            </Popup>
-                        </Marker>
-                    </MapContainer>
-                }
+            <div className="projectStyle">
+                <div style={styles}>
+                    <h3>
+                        <b>Where is the International Space Station right now?
+                        </b>
+                    </h3>
+                    {
+                        (this.state.position === null) ? 
+                        <div>
+                            Waiting for map to load...
+                        </div> :
+                        <MapContainer center={this.state.position}
+                        zoom={2} scrollWheelZoom={false} style={mapStyle}>
+                            <TileLayer
+                                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker position={this.state.position} icon={issicon}>
+                                <Popup>
+                                Latitude: {this.state.position[0].toFixed(5)}<br/> 
+                                Longitude: {this.state.position[1].toFixed(5)}
+                                </Popup>
+                            </Marker>
+                        </MapContainer>
+                    }
+                </div>
             </div>
         )
     }

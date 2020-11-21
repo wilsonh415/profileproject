@@ -57,7 +57,8 @@ class Bio extends React.Component {
                            Cal Poly, SLO graduating in Spring 2021.
                            Born, raised, and currently living in San Francisco.
                            I love running, biking, exploring places, and
-                           learning new perspectives!
+                           learning new perspectives! Looking for full-time
+                           employment developing software.
                        </p>
                    </Row>
                </Container>

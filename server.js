@@ -9,7 +9,7 @@ app.listen(port, () => {
 });
 
 app.get('/', (request, response) => {
-   response.send("Hello!!");
+   response.send("Hello!");
 });
 
 app.get('/api/issdata', async (request, response) => {
@@ -49,3 +49,10 @@ app.get('/api/spacephoto', async (request, response) => {
       response.json(data);
    }
 });
+
+app.get('/api/jokes', async (request, response) => {
+   const apiUrl = 'https://sv443.net/jokeapi/v2/joke/Any';
+   const apiResp = await fetch(apiUrl);
+   const apiData = await apiResp.json();
+   response.json(apiData);
+})

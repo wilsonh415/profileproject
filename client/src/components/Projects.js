@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, Nav, Row } from 'react-bootstrap';
 import issfoto from '../images/issfoto.jpeg';
 import SpacePhoto from './projectComponents/SpacePhoto';
+import Joke from './projectComponents/Joke';
  
 class Projects extends React.Component {
     constructor() {
@@ -16,6 +17,13 @@ class Projects extends React.Component {
            marginLeft: "5vw",
            fontFamily: "Georgia"
        };
+       const rowTwo = {
+        top: "30vh",
+        position: "relative",
+        marginLeft: "5vw",
+        fontFamily: "Georgia",
+        minHeight: "477px"
+        };
        const issCardStyle = {
            backgroundColor: "white",
            border: "1px solid",
@@ -40,6 +48,9 @@ class Projects extends React.Component {
                     </Card>
                     <SpacePhoto></SpacePhoto>
                 </Row> 
+                <Row style={rowTwo}>
+                    <Joke></Joke>
+                </Row>
                 <br/>
            </div>
        )

@@ -43,7 +43,7 @@
   background-color: lightgrey;
  }
 
- @media only screen and (min-width: 750px) {
+ @media only screen and (min-width: 850px) {
   .profileSidebar {
     height: 100vh;
     width: 25vw;
@@ -59,7 +59,7 @@
   height: 270vh;
  }
 
- @media only screen and (min-width: 750px) {
+ @media only screen and (min-width: 850px) {
   .resumeStyle {
     background-image: url('./images/GrandTeton.JPG');
     background-size: cover;
@@ -70,19 +70,21 @@
    }
  }
 
- .projectStyle {
-  background-image: url('./images/badlands.JPG');
-  background-size: cover;
-  height: 180vh;
- }
+ /* @media screen and (max-width: 800px) { */
+  .projectStyle {
+    background-image: url('./images/badlands.JPG');
+    background-size: cover;
+    height: 300vh;
+   }
+ /* } */
 
- @media only screen and (min-width: 750px) {
+ @media only screen and (min-width: 850px) {
   .projectStyle {
     background-image: url('./images/badlands.JPG');
     background-size: cover;
     background-attachment: fixed;
     background-position: 18vw 0;
-    height: 175vh;
+    height: 225vh;
     margin-left: 25vw;
    }
  }
@@ -93,7 +95,7 @@
     height: 100vh;
  }
 
- @media only screen and (min-width: 750px) {
+ @media only screen and (min-width: 850px) {
   .randomStyle {
     background-image: url('./images/mtshasta.JPG');
     background-size: cover;
@@ -110,7 +112,7 @@
     height: 100vh;
  }
 
- @media only screen and (min-width: 750px) {
+ @media only screen and (min-width: 850px) {
   .homeStyle {
     background-image: url('./images/cpslo.JPG');
     background-size: cover;

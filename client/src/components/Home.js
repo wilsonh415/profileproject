@@ -4,7 +4,7 @@ class Home extends React.Component {
     render() {
         const styles = {
             position: "relative",
-            top: "45%",
+            top: "17%",
             fontFamily: "Georgia",
             color: "white"
         }

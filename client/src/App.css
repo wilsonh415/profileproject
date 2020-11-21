@@ -70,13 +70,11 @@
    }
  }
 
- /* @media screen and (max-width: 800px) { */
   .projectStyle {
     background-image: url('./images/badlands.JPG');
     background-size: cover;
-    height: 300vh;
+    height: 310vh;
    }
- /* } */
 
  @media only screen and (min-width: 850px) {
   .projectStyle {

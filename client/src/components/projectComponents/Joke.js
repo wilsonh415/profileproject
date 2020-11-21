@@ -10,35 +10,62 @@ class Joke extends React.Component {
             jokeSetup: null,
             jokeDelivery: null,
             joke: null,
-            category: null
+            category: null,
+            showClicked: false
         }
     }
 
     getJokes = async () => {
         const resp = await fetch('/api/jokes');
         const data = await resp.json();
-        if(data.category === "Dark" || data.category === "Miscellaneous") {
+        // need to filter out the offensive/inappropriate jokes
+        const filterWords = ["sex", "penis", "FAT", "fat", "cancer",
+        "masturbating", "masturbated", "anal", "jacking", "Alzheimer's"];
+        let isBad = false;
+        if(data.joke !== undefined) {
+            let wordCheck = filterWords.map(w => data.joke.includes(w));
+            if(wordCheck.includes(true)) {
+                isBad = true;
+            }
+        }
+        if(data.setup !== undefined && data.delivery !== undefined) {
+            let wordCheck = filterWords.map(w => data.setup.includes(w));
+            wordCheck.push(...filterWords.map(w => data.delivery.includes(w)));
+            if(wordCheck.includes(true)) {
+                isBad = true;
+            }
+        }
+        if(data.category === "Dark" || data.category === "Miscellaneous" || isBad) {
             this.getJokes();
         }
-        if(data.joke !== null && data.category !== "Dark" 
-        && data.category !== "Miscellaneous") {
+        if(data.joke !== undefined && data.category !== "Dark" 
+        && data.category !== "Miscellaneous" && isBad === false) {
             this.setState({
                 joke: data.joke,
-                category: data.category
+                category: data.category,
+                jokeDelivery: null,
+                jokeSetup: null
             })
         }
-        if(data.setup !== null && data.delivery !== null 
+        if(data.setup !== undefined && data.delivery !== undefined && isBad === false
             && data.category !== "Dark" && data.category !== "Miscellaneous") {
             this.setState({
                 jokeSetup: data.setup,
                 jokeDelivery: data.delivery,
-                category: data.category
+                category: data.category,
+                joke: null
             });
         }
     }
 
     componentDidMount() {
         this.getJokes();
+    }
+
+    showClicked = () => {
+        this.setState({
+            showClicked: true
+        });
     }
 
     render() {
@@ -58,8 +85,12 @@ class Joke extends React.Component {
                         <Card.Title><b>Random Jokes!</b></Card.Title>
                         <Card.Text>
                             Lighten up your day with a laugh!
-                            <br/>
                         </Card.Text>
+                        <Card.Text style={{fontSize: "9px", marginTop: "-2vh"}}>
+                            <b style={{fontSize:"10px"}}>NOTE</b>: Some jokes may be offensive and inappropriate.
+                            This API was created by Sv443 (Sven Fehler)
+                        </Card.Text>
+                        <b><hr/></b>
                         <Card.Text style={{fontSize: "11px"}}>
                             <b>Joke Type: {this.state.category}</b>
                         </Card.Text>
@@ -74,9 +105,10 @@ class Joke extends React.Component {
                             </b>
                             <br/>
                             {
-                                (this.state.jokeDelivery !== null) ? this.state.jokeDelivery : null
+                                (this.state.jokeDelivery !== null) ? this.state.jokeDelivery : null 
                             }
                         </Card.Text>
+                        <b><hr/></b>
                     </Card.Body>
                     <Button variant="primary" onClick={() => this.getJokes()}
                     style={{width: "120px", marginLeft: "29%"}}>New Joke!</Button>

@@ -19,7 +19,7 @@ class Joke extends React.Component {
         const resp = await fetch('/api/jokes');
         const data = await resp.json();
         // need to filter out the offensive/inappropriate jokes
-        const filterWords = ["sex", "penis", "FAT", "fat", "cancer",
+        const filterWords = ["sex", "penis", "FAT", "fat", "cancer", "shitty",
         "masturbating", "masturbated", "anal", "jacking", "Alzheimer's"];
         let isBad = false;
         if(data.joke !== undefined) {

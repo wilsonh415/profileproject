@@ -111,6 +111,17 @@ class Resume extends React.Component {
         float: "left",
         marginLeft: "39px"
         };
+        // const cardStyleLLNL = {
+        //     minWidth: "38vw",
+        //     minHeight: "22vh",
+        //     backgroundColor: "white",
+        //     float: "left",
+        //     marginBottom: "5vh",
+        //     borderRadius: "35px",
+        //     flexDirection: "row",
+        //     // maxHeight: "30vh"
+        //     maxHeight: "32vh"
+        // };
 
         // SFO styles
         const sfocardlayout = {
@@ -251,20 +262,20 @@ class Resume extends React.Component {
                             onClick={() => this.setState({llnlExpand : !this.state.llnlExpand})}>
                                 <b>{this.state.llnlExpand === false ? '>' : '<'}</b>
                             </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="1">
+                            <Accordion.Collapse eventKey="1" style={{maxWidth: "30vw"}}>
                                 <Card.Body>
                                     <div>
                                         <b><u>Responsibilities:</u></b>
                                         <ul style={{fontSize: "10px", textAlign: "left"}}>
-                                            <li>Developed & designed a rationalization app for department<br/>
-                                                directors at the lab, which consisted of a complex updateable <br/>
+                                            <li>Developed & designed a rationalization app for department
+                                                directors at the lab, which consisted of a complex updateable
                                                 ledger (table of accounting data) with the use of ag-Grid.
                                             </li>
-                                            <li>Implemented various system features for our admin pages, some<br/>
-                                                of which included options to lock users out, post system messages,<br/>
+                                            <li>Implemented various system features for our admin pages, some
+                                                of which included options to lock users out, post system messages,
                                                 and give updates regarding the status of our finance application.
                                             </li>
-                                            <li>Updated and remodeled many of the finance department's <br/>
+                                            <li>Updated and remodeled many of the finance department's
                                                 SPAs (single-page applications) from AngularJS to Angular.
                                             </li>
                                         </ul>
@@ -297,18 +308,18 @@ class Resume extends React.Component {
                             onClick={() => this.setState({sfoExpand : !this.state.sfoExpand})}>
                                 <b>{this.state.lowellExpand === false ? '>' : '<'}</b>
                             </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="1">
+                            <Accordion.Collapse eventKey="1" style={{maxWidth: "30vw"}}>
                                 <Card.Body>
                                     <div>
                                         <b><u>Responsibilities:</u></b>
                                         <ul style={{fontSize: "10px", textAlign: "left"}}>
-                                            <li>Wrote unit tests in Java and ensured code coverage for <br/>
+                                            <li>Wrote unit tests in Java and ensured code coverage for
                                                 the checkpoint wait time team with the use of Jenkins.
-                                            </li>
-                                            <li>Collected Wi-Fi access point data and developed algorithms <br/>
+                                            </li> <br/>
+                                            <li>Collected Wi-Fi access point data and developed algorithms
                                                 to determine the faulty or problematic access points.
-                                            </li>
-                                            <li>Learned about RESTful APIs and the development <br/>
+                                            </li> <br/>
+                                            <li>Learned about RESTful APIs and the development
                                                 of web services.</li>
                                         </ul>
                                     </div>

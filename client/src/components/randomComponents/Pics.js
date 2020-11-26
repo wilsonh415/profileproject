@@ -125,6 +125,13 @@ class Pics extends React.Component {
             color: "white",
             marginTop: "10vh"
        };
+       const subtitleStyle = {
+        fontSize: "16px", 
+        fontFamily: "Georgia",
+        marginLeft: "7vw",
+        textAlign: "left",
+        color: "white"
+   };
        const sfStyle = {
            position: "relative",
            marginLeft: "4vw"
@@ -161,6 +168,7 @@ class Pics extends React.Component {
         return (
             <div>
                 <h3 style={titleStyle}><b>My Pictures</b></h3>
+                <h6 style={subtitleStyle}>Press photos to expand and for specific location!</h6>
                 <Row style={rowStyle}>
                     <Col md={5} style={sfStyle}>
                         <Image style={imgStyle} src={landsend} height={120} 
@@ -168,7 +176,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showLandsEnd} style={modalStyles}
                         onHide={() => this.handleLandsEndClose()}>
                             <Modal.Title style={modalText}>Lands End, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={landsend} height={420} width={420}/>
+                            <Image style={modalImages} src={landsend} height={450} width={450}/>
                         </Modal>
 
                         <Image style={imgStyle} src={sutrobaths} height={120} 
@@ -176,7 +184,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showSutroBaths} style={modalStyles}
                         onHide={() => this.handleSutroBathsClose()}>
                             <Modal.Title style={modalText}>Sutro Baths, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={sutrobaths} height={420} width={420}/>
+                            <Image style={modalImages} src={sutrobaths} height={450} width={450}/>
                         </Modal>
         
                         <Image style={imgStyle} src={palace} height={120} 
@@ -184,7 +192,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showPalace} style={modalStyles}
                         onHide={() => this.handlePalaceClose()}>
                             <Modal.Title style={modalText}>Palace of Fine Arts, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={palace} height={420} width={420}/>
+                            <Image style={modalImages} src={palace} height={450} width={450}/>
                         </Modal>
 
                         <Image style={imgStyle} src={inacoolbrithpark} height={120} 
@@ -192,7 +200,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showCoolbrith} style={modalStyles}
                         onHide={() => this.handleCoolbrithClose()}>
                             <Modal.Title style={modalText}>Ina Coolbrith Park, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={inacoolbrithpark} height={420} width={420}/>
+                            <Image style={modalImages} src={inacoolbrithpark} height={450} width={450}/>
                         </Modal>
 
                         <Image style={imgStyle} src={lakemerced} height={120} 
@@ -200,7 +208,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showLakeMerced} style={modalStyles}
                         onHide={() => this.handleLakeMercedClose()}>
                             <Modal.Title style={modalText}>Lake Merced, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={lakemerced} height={420} width={420}/>
+                            <Image style={modalImages} src={lakemerced} height={450} width={450}/>
                         </Modal>
 
                         <Image style={imgStyle} src={dolorespark} height={120} 
@@ -208,7 +216,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showDolores} style={modalStyles}
                         onHide={() => this.handleDoloresClose()}>
                             <Modal.Title style={modalText}>Dolores Park, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={dolorespark} height={420} width={420}/>
+                            <Image style={modalImages} src={dolorespark} height={450} width={450}/>
                         </Modal>
 
                         <Image style={imgStyle} src={crissyfields} height={120} 
@@ -216,7 +224,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showCrissy} style={modalStyles}
                         onHide={() => this.handleCrissyClose()}>
                             <Modal.Title style={modalText}>Crissy Field, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={crissyfields} height={420} width={420}/>
+                            <Image style={modalImages} src={crissyfields} height={450} width={450}/>
                         </Modal>
 
                         <Image style={imgStyle} src={ggp} height={120} 
@@ -224,7 +232,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showGGP} style={modalStyles}
                         onHide={() => this.handleGGPClose()}>
                             <Modal.Title style={modalText}>Golden Gate Park, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={ggp} height={420} width={420}/>
+                            <Image style={modalImages} src={ggp} height={450} width={450}/>
                         </Modal>
 
                         <Image style={imgStyle} src={twinpeaks} height={120} 
@@ -232,7 +240,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showTwinPeaks} style={modalStyles}
                         onHide={() => this.handleTwinPeaksClose()}>
                             <Modal.Title style={modalText}>Twin Peaks, San Francisco</Modal.Title>
-                            <Image style={modalImages} src={twinpeaks} height={420} width={420}/>
+                            <Image style={modalImages} src={twinpeaks} height={450} width={450}/>
                         </Modal>
 
                         <b><p style={textCityStyle}>My Hometown - San Francisco</p></b>
@@ -243,7 +251,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showFaithful} style={modalStyles}
                         onHide={() => this.handleFaithfulClose()}>
                             <Modal.Title style={modalText}>Old Faithful, Yellowstone National Park</Modal.Title>
-                            <Image style={modalImages} src={oldfaithful} height={420} width={420}/>
+                            <Image style={modalImages} src={oldfaithful} height={450} width={450}/>
                         </Modal>
 
                         <Image src={boysenstatepark} style={imgStyle} height={180}
@@ -251,7 +259,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showBoysen} style={modalStyles}
                         onHide={() => this.handleBoysenClose()}>
                             <Modal.Title style={modalText}>Boysen State Park, Wyoming</Modal.Title>
-                            <Image style={modalImages} src={boysenstatepark} height={420} width={420}/>
+                            <Image style={modalImages} src={boysenstatepark} height={450} width={450}/>
                         </Modal>
 
                         <Image src={yellowstone} style={imgStyle} height={180} 
@@ -259,7 +267,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showYellowstone} style={modalStyles}
                         onHide={() => this.handleYellowstoneClose()}>
                             <Modal.Title style={modalText}>Yellowstone National Park, Wyoming</Modal.Title>
-                            <Image style={modalImages} src={yellowstone} height={420} width={420}/>
+                            <Image style={modalImages} src={yellowstone} height={450} width={450}/>
                         </Modal>
 
                         <Image src={grandteton} style={imgStyle} height={180} 
@@ -267,7 +275,7 @@ class Pics extends React.Component {
                         <Modal show={this.state.showTeton} style={modalStyles}
                         onHide={() => this.handleTetonClose()}>
                             <Modal.Title style={modalText}>Grand Teton, Wyoming</Modal.Title>
-                            <Image style={modalImages} src={grandteton} height={420} width={420}/>
+                            <Image style={modalImages} src={grandteton} height={450} width={450}/>
                         </Modal>
                         <b><p style={textCityStyle}>Wyoming</p></b>
                     </Col>

@@ -4,6 +4,7 @@ import tameimpala from '../images/theslowrush.jpg';
 import inreturn from '../images/inreturn.jpg';
 import travisscott from '../images/birdsinthetrap.jpg';
 import rhcp from '../images/stadiumarcadium.jpg';
+import Pics from './randomComponents/Pics';
 
  
 class Random extends React.Component {
@@ -50,7 +51,7 @@ class Random extends React.Component {
        }
        return (
            <div className="randomStyle">
-               <h3 style={favAlbumStyle}>Favorite Albums</h3>
+               <h3 style={favAlbumStyle}><b>Favorite Albums</b></h3>
                <div>
                    <Row style={rowStyle}>
                        <Col md={5} style={odeszaStyles}>
@@ -85,8 +86,8 @@ class Random extends React.Component {
                        <b><p style={textStyle}>Red Hot Chili Peppers - Stadium Arcadium</p></b>
                        </Col>
                    </Row>
-
                </div>
+               <Pics></Pics>
            </div>
        );
    }

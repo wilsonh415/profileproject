@@ -89,7 +89,7 @@
  .randomStyle {
     background-image: url('./images/mtshasta.JPG');
     background-size: cover;
-    height: 200vh;
+    height: 450vh;
  }
 
  @media only screen and (min-width: 850px) {
@@ -98,7 +98,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: 18vh;
-    height: 150vh;
+    height: 250vh;
     margin-left: 25vw;
    }
  }

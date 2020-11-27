@@ -7,12 +7,15 @@ class Home extends React.Component {
             top: "19%",
             fontFamily: "Georgia",
             color: "white",
-            fontSize: "45px"
+            fontSize: "45px",
+            marginLeft: "10vw",
+            marginRight: "10vw"
         }
         return (
             <div className="homeStyle">
                 <h1 style={styles}>
-                    Hey there, welcome to my website!
+                    Hi, I'm Wilson. Welcome to my website!
+                    It is still a work in progress.
                 </h1>
             </div>
         )

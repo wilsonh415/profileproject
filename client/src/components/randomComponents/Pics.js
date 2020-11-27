@@ -56,9 +56,21 @@ class Pics extends React.Component {
             showTimes: false,
             showCentral: false,
             showBrooklyn: false,
-            showTarrytown: false
+            showTarrytown: false,
+            windowWidth: window.innerWidth
         }
     };
+
+    updateWindow = () => {
+        this.setState({
+            windowWidth: window.innerWidth
+        });
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateWindow);
+    }
+
     // new york setters
     handleTimesOpen = () => {this.setState({showTimes: true});};
     handleTimesClose = () => {this.setState({showTimes: false});};
@@ -149,8 +161,8 @@ class Pics extends React.Component {
         const modalImages = {
             margin: "auto",
             border: "2px solid white",
-            height: "55vh",
-            width: "50vw"
+            height: (this.state.windowWidth >= 900) ? "55vh" : "50%",
+            width: (this.state.windowWidth >= 900) ? "50vw" : "80%"
         };
         const modalText = { 
             textAlign: "center",

@@ -4,14 +4,15 @@ class Home extends React.Component {
     render() {
         const styles = {
             position: "relative",
-            top: "17%",
+            top: "19%",
             fontFamily: "Georgia",
-            color: "white"
+            color: "white",
+            fontSize: "45px"
         }
         return (
             <div className="homeStyle">
                 <h1 style={styles}>
-                    Welcome! Website is still a work in progress.
+                    Hey there, welcome to my website!
                 </h1>
             </div>
         )

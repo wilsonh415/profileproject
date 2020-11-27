@@ -3,12 +3,12 @@ import { Container, Row } from 'react-bootstrap';
 import AvatarEditor from 'react-avatar-editor';
 // import profilepic from '../images/profilepic.JPG';
 import profilepic from '../images/foto.JPG';
-import gmailicon from '../images/gmailicon.png';
-import githubicon from '../images/githubicon.svg';
-import linkedinicon from '../images/linkedinicon.png';
+import gmailicon from '../images/medialogos/gmailicon.png';
+import githubicon from '../images/medialogos/githubicon.svg';
+import linkedinicon from '../images/medialogos/linkedinicon.png';
  
 class Bio extends React.Component {
- 
+
    render() {
        const bioText = {
            margin: "10px",

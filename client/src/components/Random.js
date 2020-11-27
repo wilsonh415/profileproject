@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
-import tameimpala from '../images/theslowrush.jpg';
-import inreturn from '../images/inreturn.jpg';
-import travisscott from '../images/birdsinthetrap.jpg';
-import rhcp from '../images/stadiumarcadium.jpg';
+import tameimpala from '../images/albumcovers/theslowrush.jpg';
+import inreturn from '../images/albumcovers/inreturn.jpg';
+import travisscott from '../images/albumcovers/birdsinthetrap.jpg';
+import rhcp from '../images/albumcovers/stadiumarcadium.jpg';
 import Pics from './randomComponents/Pics';
 
  
@@ -20,6 +20,13 @@ class Random extends React.Component {
             textAlign: "left",
             color: "white"
        }
+       const subtitleStyle = {
+        fontSize: "16px", 
+        fontFamily: "Georgia",
+        marginLeft: "7vw",
+        textAlign: "left",
+        color: "white"
+        };
         const rowStyle = {
             top: "3vh",
             position: "relative",
@@ -52,6 +59,7 @@ class Random extends React.Component {
        return (
            <div className="randomStyle">
                <h3 style={favAlbumStyle}><b>Favorite Albums</b></h3>
+               <h6 style={subtitleStyle}>Click on album cover to listen on Spotify!</h6>
                <div>
                    <Row style={rowStyle}>
                        <Col md={5} style={odeszaStyles}>

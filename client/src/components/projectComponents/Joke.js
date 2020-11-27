@@ -111,7 +111,7 @@ class Joke extends React.Component {
                         <b><hr/></b>
                     </Card.Body>
                     <Button variant="primary" onClick={() => this.getJokes()}
-                    style={{width: "120px", marginLeft: "29%"}}>New Joke!</Button>
+                    style={{width: "120px", marginLeft: "29%", marginBottom: "2vh"}}>New Joke!</Button>
                 </Card>
             </div>
         )

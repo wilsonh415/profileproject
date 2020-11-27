@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, Accordion, Button } from 'react-bootstrap';
-import cplogo from '../images/cplogo.jpeg';
-import lowelllogo from '../images/lowelllogo.png';
-import llnllogo from '../images/llnllogo.jpeg';
-import sfologo from '../images/sfologo.png';
+import cplogo from '../images/resumelogos/cplogo.jpeg';
+import lowelllogo from '../images/resumelogos/lowelllogo.png';
+import llnllogo from '../images/resumelogos/llnllogo.jpeg';
+import sfologo from '../images/resumelogos/sfologo.png';
  
 class Resume extends React.Component {
     constructor() {
@@ -12,7 +12,50 @@ class Resume extends React.Component {
             cpExpand: false,
             lowellExpand: false,
             llnlExpand: false,
-            sfoExpand: false
+            sfoExpand: false,
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight
+        }
+    }
+
+    updateWindow = () => {
+        this.setState({
+            windowWidth: window.innerWidth
+        });
+        if(window.innerWidth <= 750 && (this.state.cpExpand === true ||
+            this.state.lowellExpand || this.state.llnlExpand || this.state.sfoExpand)) {
+            this.setState({
+                cpExpand: false,
+                lowellExpand: false,
+                llnlExpand: false,
+                sfoExpand: false
+            });
+            window.alert("Browser width is too small to display details");
+            window.location.reload();
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateWindow);
+    }
+
+    checkExpand = (param) => {
+        if(this.state.windowWidth < 750) {
+            window.alert("Browser width not large enough to display details! " +  
+            "Please expand browser width or use another device.");
+            window.location.reload();
+        }
+        else if(param === "Cal Poly" && this.state.windowWidth >= 750) {
+            this.setState({cpExpand : !this.state.cpExpand})
+        }
+        else if(param === "Lowell" && this.state.windowWidth >= 750) {
+            this.setState({lowellExpand : !this.state.lowellExpand})
+        }
+        else if(param === "LLNL" && this.state.windowWidth >= 750) {
+            this.setState({llnlExpand : !this.state.llnlExpand})
+        }
+        else if(param === "SFO" && this.state.windowWidth >= 750) {
+            this.setState({sfoExpand : !this.state.sfoExpand})
         }
     }
  
@@ -34,7 +77,8 @@ class Resume extends React.Component {
            float: "left",
            fontFamily: "Georgia",
            fontSize: "30px",
-           backgroundColor: "skyblue"
+           backgroundColor: "skyblue",
+           clear: "both"
        }
        const cardStyle = {
             minWidth: "38vw",
@@ -44,7 +88,7 @@ class Resume extends React.Component {
             marginBottom: "5vh",
             borderRadius: "35px",
             flexDirection: "row",
-            // maxHeight: "30vh"
+            maxHeight: (this.state.windowWidth >= 950) ? "28vh" : null
         };
         const subTextStyle = {
             fontFamily: "Raleway",
@@ -111,17 +155,6 @@ class Resume extends React.Component {
         float: "left",
         marginLeft: "39px"
         };
-        // const cardStyleLLNL = {
-        //     minWidth: "38vw",
-        //     minHeight: "22vh",
-        //     backgroundColor: "white",
-        //     float: "left",
-        //     marginBottom: "5vh",
-        //     borderRadius: "35px",
-        //     flexDirection: "row",
-        //     // maxHeight: "30vh"
-        //     maxHeight: "32vh"
-        // };
 
         // SFO styles
         const sfocardlayout = {
@@ -168,11 +201,11 @@ class Resume extends React.Component {
                                     B.S. in Computer Science
                                 </Card.Text>
                             </Card.Body>
-                            <Accordion.Toggle as={Button} variant="link" eventKey="1" 
-                            onClick={() => this.setState({cpExpand : !this.state.cpExpand})}>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="1"
+                            onClick={() => this.checkExpand("Cal Poly")}>
                                 <b>{this.state.cpExpand === false ? '>' : '<'}</b>
                             </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="1">
+                                <Accordion.Collapse eventKey="1">
                                 <Card.Body>
                                     <div style={{float: "left"}}>
                                         <b><u>Relevant Coursework:</u></b><br/>
@@ -188,7 +221,7 @@ class Resume extends React.Component {
                                         </ul>
                                     </div>
                                 </Card.Body>
-                            </Accordion.Collapse>
+                                </Accordion.Collapse>
                         </Card>
                     </Accordion>
                 </div>
@@ -213,7 +246,7 @@ class Resume extends React.Component {
                                 </Card.Text>
                             </Card.Body>
                             <Accordion.Toggle as={Button} variant="link" eventKey="1" 
-                            onClick={() => this.setState({lowellExpand : !this.state.lowellExpand})}>
+                            onClick={() => this.checkExpand("Lowell")}>
                                 <b>{this.state.lowellExpand === false ? '>' : '<'}</b>
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="1">
@@ -237,9 +270,9 @@ class Resume extends React.Component {
                    </Accordion>
                </div>
                <div style={llnlcardlayout}>
-                    <h2 style={experienceStyle}>
-                        <b>Experience</b>
-                    </h2>
+               <h2 style={experienceStyle}>
+                    <b>Experience</b>
+                </h2>
                     <Accordion>
                         <Card style={cardStyle}>
                            <Card.Img variant="left" src={llnllogo} style={llnlLogoStyle}/>
@@ -259,7 +292,7 @@ class Resume extends React.Component {
                                </Card.Text>
                            </Card.Body>
                             <Accordion.Toggle as={Button} variant="link" eventKey="1"
-                            onClick={() => this.setState({llnlExpand : !this.state.llnlExpand})}>
+                            onClick={() => this.checkExpand("LLNL")}>
                                 <b>{this.state.llnlExpand === false ? '>' : '<'}</b>
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="1" style={{maxWidth: "30vw"}}>
@@ -301,12 +334,12 @@ class Resume extends React.Component {
                                </Card.Text>
                                <br/>
                                <Card.Text style={sfoSubText}>
-                                   Public Service Trainee (Software Engineering Intern)
+                                   Public Service Trainee (SWE Intern)
                                </Card.Text>
                            </Card.Body>
                             <Accordion.Toggle as={Button} variant="link" eventKey="1"
-                            onClick={() => this.setState({sfoExpand : !this.state.sfoExpand})}>
-                                <b>{this.state.lowellExpand === false ? '>' : '<'}</b>
+                            onClick={() => this.checkExpand("SFO")}>
+                                <b>{this.state.sfoExpand === false ? '>' : '<'}</b>
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="1" style={{maxWidth: "30vw"}}>
                                 <Card.Body>

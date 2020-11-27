@@ -174,72 +174,72 @@ class Pics extends React.Component {
                 <h6 style={subtitleStyle}>Click on photos to expand and for specific location!</h6>
                 <Row style={rowStyle}>
                     <Col md={5} style={sfStyle}>
-                        <Image style={imgStyle} src={landsend} height={120} 
-                        width={120} onClick={() => this.handleLandsEndOpen()}/>
+                        <Image style={imgStyle} src={landsend} height={110} 
+                        width={110} onClick={() => this.handleLandsEndOpen()}/>
                         <Modal show={this.state.showLandsEnd} style={modalStyles}
                         onHide={() => this.handleLandsEndClose()}>
                             <Modal.Title style={modalText}>Lands End</Modal.Title>
                             <Image style={modalImages} src={landsend}/>
                         </Modal>
 
-                        <Image style={imgStyle} src={sutrobaths} height={120} 
-                        width={120} onClick={() => this.handleSutroBathsOpen()}/>
+                        <Image style={imgStyle} src={sutrobaths} height={110} 
+                        width={110} onClick={() => this.handleSutroBathsOpen()}/>
                         <Modal show={this.state.showSutroBaths} style={modalStyles}
                         onHide={() => this.handleSutroBathsClose()}>
                             <Modal.Title style={modalText}>Sutro Baths</Modal.Title>
                             <Image style={modalImages} src={sutrobaths}/>
                         </Modal>
         
-                        <Image style={imgStyle} src={palace} height={120} 
-                        width={120} onClick={() => this.handlePalaceOpen()}/>
+                        <Image style={imgStyle} src={palace} height={110} 
+                        width={110} onClick={() => this.handlePalaceOpen()}/>
                         <Modal show={this.state.showPalace} style={modalStyles}
                         onHide={() => this.handlePalaceClose()}>
                             <Modal.Title style={modalText}>Palace of Fine Arts</Modal.Title>
                             <Image style={modalImages} src={palace}/>
                         </Modal>
 
-                        <Image style={imgStyle} src={inacoolbrithpark} height={120} 
-                        width={120} onClick={() => this.handleCoolbrithOpen()}/>
+                        <Image style={imgStyle} src={inacoolbrithpark} height={110} 
+                        width={110} onClick={() => this.handleCoolbrithOpen()}/>
                         <Modal show={this.state.showCoolbrith} style={modalStyles}
                         onHide={() => this.handleCoolbrithClose()}>
                             <Modal.Title style={modalText}>Ina Coolbrith Park</Modal.Title>
                             <Image style={modalImages} src={inacoolbrithpark}/>
                         </Modal>
 
-                        <Image style={imgStyle} src={lakemerced} height={120} 
-                        width={120} onClick={() => this.handleLakeMercedOpen()}/>
+                        <Image style={imgStyle} src={lakemerced} height={110} 
+                        width={110} onClick={() => this.handleLakeMercedOpen()}/>
                         <Modal show={this.state.showLakeMerced} style={modalStyles}
                         onHide={() => this.handleLakeMercedClose()}>
                             <Modal.Title style={modalText}>Lake Merced</Modal.Title>
                             <Image style={modalImages} src={lakemerced}/>
                         </Modal>
 
-                        <Image style={imgStyle} src={dolorespark} height={120} 
-                        width={120} onClick={() => this.handleDoloresOpen()}/>
+                        <Image style={imgStyle} src={dolorespark} height={110} 
+                        width={110} onClick={() => this.handleDoloresOpen()}/>
                         <Modal show={this.state.showDolores} style={modalStyles}
                         onHide={() => this.handleDoloresClose()}>
                             <Modal.Title style={modalText}>Dolores Park</Modal.Title>
                             <Image style={modalImages} src={dolorespark}/>
                         </Modal>
 
-                        <Image style={imgStyle} src={crissyfields} height={120} 
-                        width={120} onClick={() => this.handleCrissyOpen()}/>
+                        <Image style={imgStyle} src={crissyfields} height={110} 
+                        width={110} onClick={() => this.handleCrissyOpen()}/>
                         <Modal show={this.state.showCrissy} style={modalStyles}
                         onHide={() => this.handleCrissyClose()}>
                             <Modal.Title style={modalText}>Crissy Field</Modal.Title>
                             <Image style={modalImages} src={crissyfields}/>
                         </Modal>
 
-                        <Image style={imgStyle} src={ggp} height={120} 
-                        width={120} onClick={() => this.handleGGPOpen()}/>
+                        <Image style={imgStyle} src={ggp} height={110} 
+                        width={110} onClick={() => this.handleGGPOpen()}/>
                         <Modal show={this.state.showGGP} style={modalStyles}
                         onHide={() => this.handleGGPClose()}>
                             <Modal.Title style={modalText}>Golden Gate Park</Modal.Title>
                             <Image style={modalImages} src={ggp}/>
                         </Modal>
 
-                        <Image style={imgStyle} src={twinpeaks} height={120} 
-                        width={120} onClick={() => this.handleTwinPeaksOpen()}/>
+                        <Image style={imgStyle} src={twinpeaks} height={110} 
+                        width={110} onClick={() => this.handleTwinPeaksOpen()}/>
                         <Modal show={this.state.showTwinPeaks} style={modalStyles}
                         onHide={() => this.handleTwinPeaksClose()}>
                             <Modal.Title style={modalText}>Twin Peaks</Modal.Title>
@@ -249,32 +249,32 @@ class Pics extends React.Component {
                         <b><p style={textCityStyle}>My Hometown - San Francisco</p></b>
                     </Col>
                     <Col md={5} style={{position: "relative"}}>
-                        <Image src={oldfaithful} style={imgStyle} height={180} 
-                        width={180} onClick={() => this.handleFaithfulOpen()}/>
+                        <Image src={oldfaithful} style={imgStyle} height={165} 
+                        width={165} onClick={() => this.handleFaithfulOpen()}/>
                         <Modal show={this.state.showFaithful} style={modalStyles}
                         onHide={() => this.handleFaithfulClose()}>
                             <Modal.Title style={modalText}>Old Faithful - Yellowstone National Park</Modal.Title>
                             <Image style={modalImages} src={oldfaithful}/>
                         </Modal>
 
-                        <Image src={boysenstatepark} style={imgStyle} height={180}
-                        width={180} onClick={() => this.handleBoysenOpen()}/>
+                        <Image src={boysenstatepark} style={imgStyle} height={165}
+                        width={165} onClick={() => this.handleBoysenOpen()}/>
                         <Modal show={this.state.showBoysen} style={modalStyles}
                         onHide={() => this.handleBoysenClose()}>
                             <Modal.Title style={modalText}>Boysen State Park</Modal.Title>
                             <Image style={modalImages} src={boysenstatepark}/>
                         </Modal>
 
-                        <Image src={yellowstone} style={imgStyle} height={180} 
-                        width={180} onClick={() => this.handleYellowstoneOpen()}/>
+                        <Image src={yellowstone} style={imgStyle} height={165} 
+                        width={165} onClick={() => this.handleYellowstoneOpen()}/>
                         <Modal show={this.state.showYellowstone} style={modalStyles}
                         onHide={() => this.handleYellowstoneClose()}>
                             <Modal.Title style={modalText}>Yellowstone National Park</Modal.Title>
                             <Image style={modalImages} src={yellowstone}/>
                         </Modal>
 
-                        <Image src={grandteton} style={imgStyle} height={180} 
-                        width={180} onClick={() => this.handleTetonOpen()}/>
+                        <Image src={grandteton} style={imgStyle} height={165} 
+                        width={165} onClick={() => this.handleTetonOpen()}/>
                         <Modal show={this.state.showTeton} style={modalStyles}
                         onHide={() => this.handleTetonClose()}>
                             <Modal.Title style={modalText}>Grand Teton National Park</Modal.Title>
@@ -286,32 +286,32 @@ class Pics extends React.Component {
                 <Row style={rowStyle}>
                     <Col md={5} style={sfStyle}>
 
-                        <Image src={interior} style={imgStyle} height={180} 
-                        width={180} onClick={() => this.handleInteriorOpen()}/>
+                        <Image src={interior} style={imgStyle} height={165} 
+                        width={165} onClick={() => this.handleInteriorOpen()}/>
                         <Modal show={this.state.showInterior} style={modalStyles}
                         onHide={() => this.handleInteriorClose()}>
                             <Modal.Title style={modalText}>Interior - Badlands National Park</Modal.Title>
                             <Image style={modalImages} src={interior}/>
                         </Modal>
 
-                        <Image src={badlands} style={imgStyle} height={180} 
-                        width={180} onClick={() => this.handleBadlandsOpen()}/>
+                        <Image src={badlands} style={imgStyle} height={165} 
+                        width={165} onClick={() => this.handleBadlandsOpen()}/>
                         <Modal show={this.state.showBadlands} style={modalStyles}
                         onHide={() => this.handleBadlandsClose()}>
                             <Modal.Title style={modalText}>Badlands National Park</Modal.Title>
                             <Image style={modalImages} src={badlands}/>
                         </Modal>
 
-                        <Image src={pioneer} style={imgStyle} height={180} 
-                        width={180} onClick={() => this.handlePioneerOpen()}/>
+                        <Image src={pioneer} style={imgStyle} height={165} 
+                        width={165} onClick={() => this.handlePioneerOpen()}/>
                         <Modal show={this.state.showPioneer} style={modalStyles}
                         onHide={() => this.handlePioneerClose()}>
                             <Modal.Title style={modalText}>Pioneer Auto Museum - Murdo</Modal.Title>
                             <Image style={modalImages} src={pioneer}/>
                         </Modal>
 
-                        <Image src={custer} style={imgStyle} height={180} 
-                        width={180} onClick={() => this.handleCusterOpen()}/>
+                        <Image src={custer} style={imgStyle} height={165} 
+                        width={165} onClick={() => this.handleCusterOpen()}/>
                         <Modal show={this.state.showCuster} style={modalStyles}
                         onHide={() => this.handleCusterClose()}>
                             <Modal.Title style={modalText}>Custer State Park</Modal.Title>
@@ -320,32 +320,32 @@ class Pics extends React.Component {
                         <b><p style={textCityStyle}>South Dakota</p></b>
                     </Col>
                     <Col md={5} style={{position: "relative"}}>
-                        <Image src={centralpark} style={imgStyle} height={180}
-                        width={180} onClick={() => this.handleCentralOpen()}/>
+                        <Image src={centralpark} style={imgStyle} height={165}
+                        width={165} onClick={() => this.handleCentralOpen()}/>
                         <Modal show={this.state.showCentral} style={modalStyles}
                         onHide={() => this.handleCentralClose()}>
                             <Modal.Title style={modalText}>Central Park - NYC</Modal.Title>
                             <Image style={modalImages} src={centralpark}/>
                         </Modal>
 
-                        <Image src={timessquare} style={imgStyle} height={180}
-                        width={180} onClick={() => this.handleTimesOpen()}/>
+                        <Image src={timessquare} style={imgStyle} height={165}
+                        width={165} onClick={() => this.handleTimesOpen()}/>
                         <Modal show={this.state.showTimes} style={modalStyles}
                         onHide={() => this.handleTimesClose()}>
                             <Modal.Title style={modalText}>Times Square - NYC</Modal.Title>
                             <Image style={modalImages} src={timessquare}/>
                         </Modal>
 
-                        <Image src={brooklynbridge} style={imgStyle} height={180}
-                        width={180} onClick={() => this.handleBrooklynOpen()}/>
+                        <Image src={brooklynbridge} style={imgStyle} height={165}
+                        width={165} onClick={() => this.handleBrooklynOpen()}/>
                         <Modal show={this.state.showBrooklyn} style={modalStyles}
                         onHide={() => this.handleBrooklynClose()}>
                             <Modal.Title style={modalText}>Brooklyn Bridge</Modal.Title>
                             <Image style={modalImages} src={brooklynbridge}/>
                         </Modal>
 
-                        <Image src={tarrytown} style={imgStyle} height={180}
-                        width={180} onClick={() => this.handleTarrytownOpen()}/>
+                        <Image src={tarrytown} style={imgStyle} height={165}
+                        width={165} onClick={() => this.handleTarrytownOpen()}/>
                         <Modal show={this.state.showTarrytown} style={modalStyles}
                         onHide={() => this.handleTarrytownClose()}>
                             <Modal.Title style={modalText}>Tarrytown</Modal.Title>

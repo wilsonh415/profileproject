@@ -68,7 +68,8 @@ class Resume extends React.Component {
            float: "left",
            fontFamily: "Georgia",
            fontSize: "30px",
-           backgroundColor: "skyblue"
+           backgroundColor: "skyblue",
+           clear: "both"
        }
        const experienceStyle = {
            marginLeft: "1vw",
@@ -93,7 +94,8 @@ class Resume extends React.Component {
         const subTextStyle = {
             fontFamily: "Raleway",
             fontSize: "15px",
-            float: "left"
+            float: "left",
+            clear: "both"
         };
 
        // Cal Poly Styles
@@ -101,7 +103,8 @@ class Resume extends React.Component {
             top: "5vh",
             position: "relative",
             marginLeft: "5vw",
-            width: (this.state.cpExpand) ? "64vw" : "44vw"
+            width: (this.state.cpExpand) ? "64vw" : "44vw",
+            clear: "both"
        };
        const cpLogoStyle = {
             marginLeft: "10px",
@@ -153,7 +156,8 @@ class Resume extends React.Component {
         fontFamily: "Raleway",
         fontSize: "15px",
         float: "left",
-        marginLeft: "39px"
+        marginLeft: "39px",
+        clear: "both"
         };
 
         // SFO styles
@@ -174,7 +178,8 @@ class Resume extends React.Component {
            fontFamily: "Raleway",
            fontSize: "15px",
            float: "left",
-           marginLeft: "10px"
+           marginLeft: "10px",
+           clear: "both"
        };
        return (
            <div className="resumeStyle">
@@ -194,11 +199,11 @@ class Resume extends React.Component {
                                 </Card.Title>
                                 <br/>
                                 <Card.Text style={subTextStyle}>
-                                    San Luis Obispo, CA &nbsp; <b>|</b> &nbsp; Sep 2017 - Present
+                                    &nbsp; San Luis Obispo, CA &nbsp; <b>|</b> &nbsp; Sep 2017 - Present
                                 </Card.Text>
                                 <br/>
                                 <Card.Text style={subTextStyle}>
-                                    B.S. in Computer Science
+                                    &nbsp; B.S. in Computer Science
                                 </Card.Text>
                             </Card.Body>
                             <Accordion.Toggle as={Button} variant="link" eventKey="1"
@@ -285,10 +290,11 @@ class Resume extends React.Component {
                                </Card.Title>
                                <Card.Text style={llnlSubText}>
                                    Livermore, CA &nbsp; <b>|</b> &nbsp; Apr 2019 - Aug 2019
+                                   
                                </Card.Text>
                                <br/>
                                <Card.Text style={llnlSubText}>
-                                   Computation Student Scholar
+                               Computation Student Scholar
                                </Card.Text>
                            </Card.Body>
                             <Accordion.Toggle as={Button} variant="link" eventKey="1"

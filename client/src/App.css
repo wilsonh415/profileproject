@@ -160,7 +160,28 @@
     background-color: white;
     border: 1px solid;
     min-width: 286px;
-    margin-left: 27vw;
+    margin-left: 30vw;
     position: absolute;
+    min-height: 477px;
+   }
+ }
+
+ .msCardClass {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  min-width: 286px;
+  position: relative;
+  /* margin-left: 10vw; */
+}
+
+ @media only screen and (min-width: 950px) {
+   .msCardClass {
+    background-color: white;
+    border: 1px solid;
+    min-width: 286px;
+    margin-left: 30vw;
+    position: absolute;
+    min-height: 477px;
    }
  }

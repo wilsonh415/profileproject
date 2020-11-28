@@ -73,9 +73,11 @@ class Joke extends React.Component {
             backgroundColor: "white",
             border: "1px solid",
             borderRadius: "5px",
+            minWidth: "286px",
             maxWidth: "286px",
             position: "relative",
-            fontFamily: "Georgia"
+            fontFamily: "Georgia",
+            marginBottom: "5vh"
         }
         return (
             <div style={styles}>

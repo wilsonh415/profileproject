@@ -56,7 +56,7 @@ class Iss extends React.Component {
             marginTop: "2vh",
             marginLeft: "auto",
             marginRight: "auto",
-            width: "21vw",
+            width: "320px",
             padding: "0px",
             background: "lightgrey"
         }

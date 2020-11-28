@@ -26,12 +26,12 @@ class SpacePhoto extends React.Component {
     }
 
     async componentDidMount() {
-        // const resp = await fetch('/api/spacephoto');
-        // const data = await resp.json();
-        // this.setState({
-        //     spaceFoto: data.hdurl,
-        //     copyright: data.copyright
-        // });
+        const resp = await fetch('/api/spacephoto');
+        const data = await resp.json();
+        this.setState({
+            spaceFoto: data.hdurl,
+            copyright: data.copyright
+        });
     }
 
     handleDateChange = async (data) => {

@@ -70,13 +70,15 @@ class SpacePhoto extends React.Component {
                 <Card.Img variant="top" src={this.state.spaceFoto} width={286} height={180}/>
                 <Card.Body>
                     <Card.Title><b>NASA's astronomy photo of the day!</b></Card.Title>
+                    <b><hr/></b>
                     <Card.Text>
                     Look at the astronomy photo of the day from {this.state.stringDate}.
                     <br/> Image by: {this.state.copyright}
                     </Card.Text>
+                    <b><hr/></b>
                 </Card.Body>
                 <div>
-                    <h6 style={{fontFamily: "Georgia", marginTop: "2vh"}}>
+                    <h6 style={{fontFamily: "Georgia", marginTop: "-3vh"}}>
                         <b>
                         Select space photo from <br/>another date!
                         </b>

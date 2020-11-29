@@ -147,13 +147,27 @@
   margin-top: 1vh;
  }
 
-.spacePhotoStyle {
-  background-color: white;
-  border: 1px solid;
-  border-radius: 5px;
-  min-width: 286px;
-  position: relative;
-}
+ @media only screen and (max-width: 680px) {
+  .spacePhotoStyle {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 286px;
+    position: relative;
+  }
+ }
+
+ @media only screen and (min-width: 680px) and (max-width: 950px) {
+  .spacePhotoStyle {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 286px;
+    position: absolute;
+    margin-left: 42vw;
+    max-height: 477px;
+  }
+ }
 
  @media only screen and (min-width: 950px) {
   .spacePhotoStyle {
@@ -163,25 +177,68 @@
     margin-left: 30vw;
     position: absolute;
     min-height: 477px;
+    max-height: 477px;
    }
  }
 
- .msCardClass {
-  background-color: white;
-  border: 1px solid;
-  border-radius: 5px;
-  min-width: 286px;
-  position: relative;
-  /* margin-left: 10vw; */
-}
+ @media only screen and (max-width: 680px) {
+  .msCardClass {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 286px;
+    max-width: 286px;
+    position: relative;
+    margin-right: 100px;
+    max-height: 477px;
+  }
+ }
+
+ @media only screen and (min-width: 680px) and (max-width: 950px) {
+  .msCardClass {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 286px;
+    max-width: 286px;
+    position: absolute;
+    margin-left: 42vw;
+    max-height: 477px;
+  }
+ }
 
  @media only screen and (min-width: 950px) {
    .msCardClass {
     background-color: white;
     border: 1px solid;
     min-width: 286px;
+    max-width: 286px;
     margin-left: 30vw;
     position: absolute;
-    min-height: 477px;
+    max-height: 477px;
    }
  }
+
+ /* @media only screen and (max-width: 670) {
+   .jokeStyle {
+     background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 286px;
+    max-width: 286px;
+    position: relative;
+    font-family: Georgia;
+    margin-bottom: 5vh;
+   }
+ }
+
+ .jokeStyle {
+   background-color: white;
+   border: 1px solid;
+   border-radius: 5px;
+   min-width: 286px;
+   max-width: 286px;
+   position: relative;
+   font-family: Georgia;
+   margin-bottom: 5vh;
+ } */

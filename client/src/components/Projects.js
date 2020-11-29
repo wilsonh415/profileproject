@@ -13,14 +13,14 @@ class Projects extends React.Component {
        const styles = {
            top: "20vh",
            position: "relative",
-           marginLeft: "5vw",
+           marginLeft: "7vw",
            fontFamily: "Georgia",
            minHeight: "477px"
        };
        const rowTwo = {
             top: "30vh",
             position: "relative",
-            marginLeft: "5vw",
+            marginLeft: "7vw",
             fontFamily: "Georgia",
             minHeight: "477px"
         };
@@ -33,7 +33,7 @@ class Projects extends React.Component {
                 </Row> 
                 <Row style={rowTwo}>
                     <Joke></Joke>
-                    {/* <Minesweeper></Minesweeper> */}
+                    <Minesweeper></Minesweeper>
                 </Row>
                 <br/>
            </div>

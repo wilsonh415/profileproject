@@ -69,11 +69,23 @@
    }
  }
 
+ @media only screen and (max-width: 680px) {
   .projectStyle {
     background-image: url('./images/badlands.JPG');
     background-size: cover;
-    height: 310vh;
+    height: 350vh;
    }
+ }
+
+
+ @media only screen and (min-width: 680px) and (max-width: 950px) {
+  .projectStyle {
+    background-image: url('./images/badlands.JPG');
+    background-size: cover;
+    height: 215vh;
+   }
+  }
+
 
  @media only screen and (min-width: 950px) {
   .projectStyle {
@@ -81,16 +93,43 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: 18vw 0;
-    height: 225vh;
+    height: 210vh;
     margin-left: 25vw;
    }
  }
 
+ @media only screen and (max-width: 360px) {
+  .randomStyle {
+    background-image: url('./images/mtshasta.JPG');
+    background-size: cover;
+    height: 625vh;
+  }
+ }
+
+ @media only screen and (min-width: 360px) and (max-width: 710px) {
+ .randomStyle {
+  background-image: url('./images/mtshasta.JPG');
+  background-size: cover;
+  height: 460vh;
+}
+ }
+
+ @media only screen and (min-width: 710px) and (max-width: 849px) {
  .randomStyle {
     background-image: url('./images/mtshasta.JPG');
     background-size: cover;
-    height: 470vh;
+    height: 370vh;
  }
+}
+
+ @media only screen and (min-width: 849px) and (max-width: 950px) {
+  .randomStyle {
+    background-image: url('./images/mtshasta.JPG');
+    background-size: cover;
+    height: 280vh;
+ }
+ }
+
 
  @media only screen and (min-width: 950px) {
   .randomStyle {
@@ -98,18 +137,18 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: 18vh;
-    height: 380vh;
+    height: 360vh;
     margin-left: 25vw;
    }
  }
 
- @media only screen and (min-width: 1230px) {
+ @media only screen and (min-width: 1132px) {
   .randomStyle {
     background-image: url('./images/mtshasta.JPG');
     background-size: cover;
     background-attachment: fixed;
     background-position: 18vh;
-    height: 300vh;
+    height: 280vh;
     margin-left: 25vw;
    }
  }
@@ -218,27 +257,3 @@
     max-height: 477px;
    }
  }
-
- /* @media only screen and (max-width: 670) {
-   .jokeStyle {
-     background-color: white;
-    border: 1px solid;
-    border-radius: 5px;
-    min-width: 286px;
-    max-width: 286px;
-    position: relative;
-    font-family: Georgia;
-    margin-bottom: 5vh;
-   }
- }
-
- .jokeStyle {
-   background-color: white;
-   border: 1px solid;
-   border-radius: 5px;
-   min-width: 286px;
-   max-width: 286px;
-   position: relative;
-   font-family: Georgia;
-   margin-bottom: 5vh;
- } */

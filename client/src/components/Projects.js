@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, Button, Nav, Row, Col } from 'react-bootstrap';
-import issfoto from '../images/issfoto.jpeg';
+import { Row } from 'react-bootstrap';
 import SpacePhoto from './projectComponents/SpacePhoto';
 import Joke from './projectComponents/Joke';
 import Minesweeper from './projectComponents/Minesweeper';

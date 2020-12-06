@@ -4,6 +4,7 @@ import tameimpala from '../images/albumcovers/theslowrush.jpg';
 import inreturn from '../images/albumcovers/inreturn.jpg';
 import travisscott from '../images/albumcovers/birdsinthetrap.jpg';
 import rhcp from '../images/albumcovers/stadiumarcadium.jpg';
+import houdini from '../images/albumcovers/torches.jpg';
 import Pics from './randomComponents/Pics';
 
  
@@ -87,11 +88,11 @@ class Random extends React.Component {
                         <b><p style={textStyle}>Travis Scott - Birds in the Trap Sing McKnight</p></b>
                        </Col>
                        <Col md={4} style={odeszaStyles}>
-                        <a href="https://open.spotify.com/album/7xl50xr9NDkd3i2kBbzsNZ"
+                        <a href="https://open.spotify.com/album/7Kmmw7Z5D2UD5MVwdm10sT"
                         target="_blank" rel="noopener noreferrer">
-                            <Image src={rhcp} height={220} width={220}/>
+                            <Image src={houdini} height={220} width={220}/>
                         </a>
-                       <b><p style={textStyle}>Red Hot Chili Peppers - Stadium Arcadium</p></b>
+                       <b><p style={textStyle}>Foster the People - Torches</p></b>
                        </Col>
                    </Row>
                </div>

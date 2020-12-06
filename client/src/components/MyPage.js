@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Random from './Random';
 import Home from './Home';
 import Iss from './projectComponents/Iss';
+import MinesweeperGame from './projectComponents/Game';
  
 class MyPage extends React.Component {
    render() {
@@ -20,6 +21,7 @@ class MyPage extends React.Component {
                    <Route component={Projects} path="/Projects"></Route>
                    <Route component={Random} path="/Random"></Route>
                    <Route component={Iss} path="/Iss"></Route>
+                   <Route component={MinesweeperGame} path="/Minesweeper"></Route>
                </BrowserRouter>
            </div>
        )

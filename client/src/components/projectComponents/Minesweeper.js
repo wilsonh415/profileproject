@@ -20,7 +20,7 @@ class Minesweeper extends React.Component {
                             number indicating the number of bombs around it. Choose carefully. Good luck.
                         </Card.Text>
                         <b><hr/></b>
-                        <Nav.Link>
+                        <Nav.Link href='/Minesweeper'>
                             <Button variant="primary">Coming soon!</Button>
                         </Nav.Link>
                     </Card.Body>

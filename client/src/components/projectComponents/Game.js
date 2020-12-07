@@ -30,6 +30,10 @@ class Game extends React.Component {
         return grid;
     }
 
+    mineClicked = (mineKey) => {
+        window.alert("key clicked was: " + mineKey);
+    }
+
     renderGrid = () => {
         return this.state.grid.map((row, index) => {
             return (
@@ -40,7 +44,7 @@ class Game extends React.Component {
                                 border: "1px solid black"
                             }
                             return (
-                                <td key={col.key} style={cellStyle}>
+                                <td key={col.key} style={cellStyle} onClick={() => this.mineClicked(col.key)}>
                                     {col.key}
                                 </td>
                             )
@@ -57,10 +61,14 @@ class Game extends React.Component {
             height: "350px",
             backgroundColor: "lightgrey",
             margin: "0 auto"
+        };
+        const titleStyle = {
+            fontFamily: "Georgia",
+            fontSize: "36px"
         }
         return (
             <div className="projectStyle">
-                <h2>Minesweeper</h2>
+                <h2 style={titleStyle}>Minesweeper</h2> <br/>
                 <table style={tableStyle}>
                     <tbody>
                     { (this.state.grid !== null) ? this.renderGrid() : null}

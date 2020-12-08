@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-
 class Game extends React.Component {
     constructor() {
         super();
@@ -120,18 +119,34 @@ class Game extends React.Component {
         for(let k = 0; k < 14; k++) {
             let randomX = Math.floor(Math.random() * 10);
             let randomY = Math.floor(Math.random() * 10);
-            while(seenMines.indexOf({randomX, randomY}) != -1) {
+            while(seenMines.indexOf({randomX, randomY}) !== -1) {
                 randomX = Math.floor(Math.random() * 10);
                 randomY = Math.floor(Math.random() * 10);
             }
             seenMines.push({randomX, randomY});
             grid[randomX][randomY].isMine = true;
+            grid[randomX][randomY].neighbors = "💣";
         }
         return grid;
     }
 
     mineClicked = (mineKey) => {
-        window.alert("key clicked was: " + mineKey);
+        this.state.grid.forEach((row, i) => {
+            row.forEach((col, j) => {
+                if(col.key === mineKey && col.isMine) {
+                    col.isClicked = true;
+                    window.alert("Game over!");
+                    return;
+                }
+                if(col.key === mineKey) {
+                    col.isClicked = true;
+                }
+            })
+        });
+        // rerender the component; might not be good practice
+        this.setState({
+            grid: this.state.grid
+        });
     }
 
     renderGrid = () => {
@@ -145,9 +160,10 @@ class Game extends React.Component {
                                 width: "35px",
                                 height: "35px"
                             }
+                            // "💣"
                             return (
                                 <td key={col.key} style={cellStyle} onClick={() => this.mineClicked(col.key)}>
-                                    {(col.isMine) ? "💣" : col.neighbors}
+                                    {(col.isClicked) ? col.neighbors : null}
                                 </td>
                             )
                         })

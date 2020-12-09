@@ -12,16 +12,14 @@ class Minesweeper extends React.Component {
                     <Card.Body>
                         <Card.Title><b>Minesweeper</b></Card.Title>
                         <b><hr/></b>
-                        <b>NOTE</b>: Project in the works!
-                        <b><hr/></b>
                         <Card.Text>
                             <b>Rules</b>: Clear every safe tile without
-                            selecting a bomb and you win. Each safe tile will have a
-                            number indicating the number of bombs around it. Choose carefully. Good luck.
+                            selecting a mine and you win. Each safe tile will have a
+                            number indicating the number of mines around it. Choose carefully. Good luck.
                         </Card.Text>
                         <b><hr/></b>
                         <Nav.Link href='/Minesweeper'>
-                            <Button variant="primary">Coming soon!</Button>
+                            <Button variant="primary">Play now!</Button>
                         </Nav.Link>
                     </Card.Body>
                 </Card>

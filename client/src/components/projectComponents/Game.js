@@ -608,18 +608,36 @@ class Game extends React.Component {
                                 border: "1px solid black",
                                 width: "35px",
                                 height: "35px"
-                            }
+                            };
                             const clickedCellStyle = {
                                 border: "1px solid black",
                                 width: "35px",
                                 height: "35px",
                                 backgroundColor: "white"
-                            }
-                            // "💣"
+                            };
+                            const blueStyle = {color: "blue"};
+                            const greenStyle = {color: "green"};
+                            const redStyle = {color: "red"};
+                            const navyStyle = {color: "navy"};
+                            const darkredStyle = {color: "darkred"}
                             return (
                                 (col.isClicked) ?
                                 <td key={col.key} style={clickedCellStyle}>
-                                    {col.neighbors}
+                                    {
+                                        (col.neighbors === 0) 
+                                            ? null
+                                            : (col.neighbors % 5 === 1) 
+                                            ? <b style={blueStyle}>{col.neighbors}</b>
+                                            : (col.neighbors % 5 === 2) 
+                                            ? <b style={greenStyle}>{col.neighbors}</b>
+                                            : (col.neighbors % 5 === 3) 
+                                            ? <b style={redStyle}>{col.neighbors}</b>
+                                            : (col.neighbors === 4)
+                                            ? <b style={navyStyle}>{col.neighbors}</b>
+                                            : (col.neighbors === 5)
+                                            ? <b style={darkredStyle}>{col.neighbors}</b>
+                                            : col.neighbors
+                                    }
                                 </td> :
                                 <td key={col.key} style={regularCellStyle} onClick={() => this.mineClicked(col.key)}>
                                     {(col.isClicked) ? col.neighbors : null}

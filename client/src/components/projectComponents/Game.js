@@ -116,7 +116,7 @@ class Game extends React.Component {
 
     initializeMines = (grid) => {
         let seenMines = [];
-        for(let k = 0; k < 14; k++) {
+        for(let k = 0; k < 13; k++) {
             let randomX = Math.floor(Math.random() * 10);
             let randomY = Math.floor(Math.random() * 10);
             while(seenMines.indexOf({randomX, randomY}) !== -1) {
@@ -130,16 +130,333 @@ class Game extends React.Component {
         return grid;
     }
 
+    handleZeroClicked = (i, j) => {
+        // window.alert("ZERO IS CLICKED");
+        // top left
+        if(i === 0 && j === 0) {
+            if(this.state.grid[i][j+1].neighbors === 0
+                && this.state.grid[i][j+1].isClicked === false) {
+                this.state.grid[i][j+1].isClicked = true;
+                this.handleZeroClicked(i, j+1);
+            }
+            this.state.grid[i][j+1].isClicked = true;
+
+            if(this.state.grid[i+1][j].neighbors === 0
+                && this.state.grid[i+1][j].isClicked === false) {
+                this.state.grid[i+1][j].isClicked = true;
+                this.handleZeroClicked(i+1, j);
+            }
+            this.state.grid[i+1][j].isClicked = true;
+            
+            if(this.state.grid[i+1][j+1].neighbors === 0
+                && this.state.grid[i+1][j+1].isClicked === false) {
+                this.state.grid[i+1][j+1].isClicked = true;
+                this.handleZeroClicked(i+1, j+1) 
+            }
+            this.state.grid[i+1][j+1].isClicked = true;
+        }
+        // top right
+        else if(i === 0 && j === 9) {
+            
+            if(this.state.grid[i][j-1].neighbors === 0
+                && this.state.grid[i][j-1].isClicked === false) {
+                this.state.grid[i][j-1].isClicked = true;
+                this.handleZeroClicked(i, j-1);
+            }
+            this.state.grid[i][j-1].isClicked = true;
+
+            if(this.state.grid[i+1][j].neighbors === 0
+                && this.state.grid[i+1][j].isClicked === false) {
+                this.state.grid[i+1][j].isClicked = true;
+                this.handleZeroClicked(i+1, j);
+            }
+            this.state.grid[i+1][j].isClicked = true;
+
+            if(this.state.grid[i+1][j-1].neighbors === 0
+                && this.state.grid[i+1][j-1].isClicked === false) {
+                this.state.grid[i+1][j-1].isClicked = true;
+                this.handleZeroClicked(i+1, j-1);
+            }
+            this.state.grid[i+1][j-1].isClicked = true;
+        }
+        // bottom left
+        else if(i === 9 && j === 0) {
+            
+            if(this.state.grid[i-1][j].neighbors === 0
+                && this.state.grid[i-1][j].isClicked === false) {
+                this.state.grid[i-1][j].isClicked = true;
+                this.handleZeroClicked(i-1, j);
+            }
+            this.state.grid[i-1][j].isClicked = true;
+
+            if(this.state.grid[i-1][j+1].neighbors === 0
+                && this.state.grid[i-1][j+1].isClicked === false) {
+                this.state.grid[i-1][j+1].isClicked = true;
+                this.handleZeroClicked(i-1, j+1);
+            }
+            this.state.grid[i-1][j+1].isClicked = true;
+
+            if(this.state.grid[i][j+1].neighbors === 0
+                && this.state.grid[i][j+1].isClicked === false) {
+                this.state.grid[i][j+1].isClicked = true;
+                this.handleZeroClicked(i, j+1);
+            }
+            this.state.grid[i][j+1].isClicked = true;
+        }
+        // bottom right
+        else if(i === 9 && j === 9) {
+            if(this.state.grid[i][j-1].neighbors === 0
+                && this.state.grid[i][j-1].isClicked === false) {
+                this.state.grid[i][j-1].isClicked = true;
+                this.handleZeroClicked(i, j-1);
+            }
+            this.state.grid[i][j-1].isClicked = true;
+
+            if(this.state.grid[i-1][j].neighbors === 0
+                && this.state.grid[i-1][j].isClicked === false) {
+                this.state.grid[i-1][j].isClicked = true;
+                this.handleZeroClicked(i-1, j);
+            }
+            this.state.grid[i-1][j].isClicked = true;
+
+            if(this.state.grid[i-1][j-1].neighbors === 0
+                && this.state.grid[i-1][j-1].isClicked === false) {
+                this.state.grid[i-1][j-1].isClicked = true;
+                this.handleZeroClicked(i-1, j-1);
+            }
+            this.state.grid[i-1][j-1].isClicked = true;
+        }
+        // first row, cant access mines above
+        else if(i === 0) {
+            if(this.state.grid[i][j-1].neighbors === 0
+                && this.state.grid[i][j-1].isClicked === false) {
+                this.state.grid[i][j-1].isClicked = true;
+                this.handleZeroClicked(i, j-1);
+            }
+            this.state.grid[i][j-1].isClicked = true;
+
+            if(this.state.grid[i][j+1].neighbors === 0
+                && this.state.grid[i][j+1].isClicked === false) {
+                this.state.grid[i][j+1].isClicked = true;
+                this.handleZeroClicked(i, j+1);
+            }
+            this.state.grid[i][j+1].isClicked = true;
+
+            if(this.state.grid[i+1][j-1].neighbors === 0
+                && this.state.grid[i+1][j-1].isClicked === false) {
+                this.state.grid[i+1][j-1].isClicked = true;
+                this.handleZeroClicked(i+1, j-1);
+            }
+            this.state.grid[i+1][j-1].isClicked = true;
+            
+            if(this.state.grid[i+1][j].neighbors === 0
+                && this.state.grid[i+1][j].isClicked === false) {
+                this.state.grid[i+1][j].isClicked = true;
+                this.handleZeroClicked(i+1, j);
+            }
+            this.state.grid[i+1][j].isClicked = true;
+
+            if(this.state.grid[i+1][j+1].neighbors === 0
+                && this.state.grid[i+1][j+1].isClicked === false) {
+                this.state.grid[i+1][j+1].isClicked = true;
+                this.handleZeroClicked(i+1, j+1);
+            }
+            this.state.grid[i+1][j+1].isClicked = true;
+        }
+        // last row, cant access mines below
+        else if(i === 9){
+            if(this.state.grid[i][j-1].neighbors === 0
+                && this.state.grid[i][j-1].isClicked === false) {
+                this.state.grid[i][j-1].isClicked = true;
+                this.handleZeroClicked(i, j-1);
+            }
+            this.state.grid[i][j-1].isClicked = true;
+
+            if(this.state.grid[i][j+1].neighbors === 0
+                && this.state.grid[i][j+1].isClicked === false) {
+                this.state.grid[i][j+1].isClicked = true;
+                this.handleZeroClicked(i, j+1);
+            }
+            this.state.grid[i][j+1].isClicked = true;
+            
+            if(this.state.grid[i-1][j].neighbors === 0
+                && this.state.grid[i-1][j].isClicked === false) {
+                this.state.grid[i-1][j].isClicked = true;
+                this.handleZeroClicked(i-1, j);
+            }
+            this.state.grid[i-1][j].isClicked = true;
+
+            
+            if(this.state.grid[i-1][j-1].neighbors === 0
+                && this.state.grid[i-1][j-1].isClicked === false) {
+                this.state.grid[i-1][j-1].isClicked = true;
+                this.handleZeroClicked(i-1, j-1);
+            }
+            this.state.grid[i-1][j-1].isClicked = true;
+            
+            if(this.state.grid[i-1][j+1].neighbors === 0
+                && this.state.grid[i-1][j+1].isClicked === false) {
+                this.state.grid[i-1][j+1].isClicked = true;
+                this.handleZeroClicked(i-1, j+1);
+            }
+            this.state.grid[i-1][j+1].isClicked = true;
+        }
+        // first column, cant access mines to the left
+        else if(j === 0) {
+            if(this.state.grid[i-1][j].neighbors === 0
+                && this.state.grid[i-1][j].isClicked === false) {
+                this.state.grid[i-1][j].isClicked = true;
+                this.handleZeroClicked(i-1, j);
+            }
+            this.state.grid[i-1][j].isClicked = true;
+
+            if(this.state.grid[i+1][j].neighbors === 0
+                && this.state.grid[i+1][j].isClicked === false) {
+                this.state.grid[i+1][j].isClicked = true;
+                this.handleZeroClicked(i+1, j);
+            }
+            this.state.grid[i+1][j].isClicked = true;
+
+            if(this.state.grid[i-1][j+1].neighbors === 0
+                && this.state.grid[i-1][j+1].isClicked === false) {
+                this.state.grid[i-1][j+1].isClicked = true;
+                this.handleZeroClicked(i-1, j+1);
+            }
+            this.state.grid[i-1][j+1].isClicked = true;
+
+            if(this.state.grid[i][j+1].neighbors === 0
+                && this.state.grid[i][j+1].isClicked === false) {
+                this.state.grid[i][j+1].isClicked = true;
+                this.handleZeroClicked(i, j+1);
+            }
+            this.state.grid[i][j+1].isClicked = true;
+            
+            if(this.state.grid[i+1][j+1].neighbors === 0
+                && this.state.grid[i+1][j+1].isClicked === false) {
+                this.state.grid[i+1][j+1].isClicked = true;
+                this.handleZeroClicked(i+1, j+1);
+            }
+            this.state.grid[i+1][j+1].isClicked = true;
+        }
+        // last column, cant access mines to the right
+        else if(j === 9) {
+            if(this.state.grid[i-1][j].neighbors === 0
+                && this.state.grid[i-1][j].isClicked === false) {
+                this.state.grid[i-1][j].isClicked = true;
+                this.handleZeroClicked(i-1, j);
+            } 
+            this.state.grid[i-1][j].isClicked = true;
+
+            if(this.state.grid[i+1][j].neighbors === 0
+                && this.state.grid[i+1][j].isClicked === false) {
+                this.state.grid[i+1][j].isClicked = true;
+                this.handleZeroClicked(i+1, j);
+            }
+            this.state.grid[i+1][j].isClicked = true;
+
+            if(this.state.grid[i-1][j-1].neighbors === 0
+                && this.state.grid[i-1][j-1].isClicked === false) {
+                this.state.grid[i-1][j-1].isClicked = true;
+                this.handleZeroClicked(i-1, j-1);
+            } 
+            this.state.grid[i-1][j-1].isClicked = true;
+
+            if(this.state.grid[i][j-1].neighbors === 0
+                && this.state.grid[i][j-1].isClicked === false) {
+                this.state.grid[i][j-1].isClicked = true;
+                this.handleZeroClicked(i, j-1);
+            }
+            this.state.grid[i][j-1].isClicked = true;
+
+            if(this.state.grid[i+1][j-1].neighbors === 0
+                && this.state.grid[i+1][j-1].isClicked === false) {
+                this.state.grid[i+1][j-1].isClicked = true;
+                this.handleZeroClicked(i+1, j-1);
+            }
+            this.state.grid[i+1][j-1].isClicked = true;
+        }
+        // calculate everything around
+        else {
+            if(this.state.grid[i-1][j-1].neighbors === 0
+                && this.state.grid[i-1][j-1].isClicked === false) {
+                this.state.grid[i-1][j-1].isClicked = true;
+                this.handleZeroClicked(i-1, j-1);
+            }
+            this.state.grid[i-1][j-1].isClicked = true;
+
+            if(this.state.grid[i-1][j].neighbors === 0
+                && this.state.grid[i-1][j].isClicked === false) {
+                this.state.grid[i-1][j].isClicked = true;
+                this.handleZeroClicked(i-1, j);
+            }
+            this.state.grid[i-1][j].isClicked = true;
+
+            if(this.state.grid[i-1][j+1].neighbors === 0
+                && this.state.grid[i-1][j+1].isClicked === false) {
+                this.state.grid[i-1][j+1].isClicked = true;
+                this.handleZeroClicked(i-1, j+1);
+            }
+            this.state.grid[i-1][j+1].isClicked = true;
+
+            if(this.state.grid[i][j-1].neighbors === 0
+                && this.state.grid[i][j-1].isClicked === false) {
+                this.state.grid[i][j-1].isClicked = true;
+                this.handleZeroClicked(i, j-1);
+            }
+            this.state.grid[i][j-1].isClicked = true;
+            
+            if(this.state.grid[i][j+1].neighbors === 0
+                && this.state.grid[i][j+1].isClicked === false) {
+                this.state.grid[i][j+1].isClicked = true;
+                this.handleZeroClicked(i, j+1);
+            }
+            this.state.grid[i][j+1].isClicked = true;
+
+            if(this.state.grid[i+1][j-1].neighbors === 0
+                && this.state.grid[i+1][j-1].isClicked === false) {
+                this.state.grid[i+1][j-1].isClicked = true;
+                this.handleZeroClicked(i+1, j-1);
+            }
+            this.state.grid[i+1][j-1].isClicked = true;
+
+            if(this.state.grid[i+1][j].neighbors === 0
+                && this.state.grid[i+1][j].isClicked === false) {
+                this.state.grid[i+1][j].isClicked = true;
+                this.handleZeroClicked(i+1, j);
+            }
+            this.state.grid[i+1][j].isClicked = true;
+
+            if(this.state.grid[i+1][j+1].neighbors === 0
+                && this.state.grid[i+1][j+1].isClicked === false) {
+                this.state.grid[i+1][j+1].isClicked = true;
+                this.handleZeroClicked(i+1, j+1);
+            }
+            this.state.grid[i+1][j+1].isClicked = true;
+        }
+    }
+
+    revealGrid = () => {
+        this.state.grid.forEach(row => {
+            row.forEach(col => {
+                col.isClicked = true;
+            })
+        });
+    }
+
     mineClicked = (mineKey) => {
         this.state.grid.forEach((row, i) => {
             row.forEach((col, j) => {
                 if(col.key === mineKey && col.isMine) {
                     col.isClicked = true;
                     window.alert("Game over!");
+                    this.revealGrid();
                     return;
                 }
                 if(col.key === mineKey) {
                     col.isClicked = true;
+                    if(col.neighbors === 0) {
+                        this.handleZeroClicked(i, j);
+                    }
                 }
             })
         });

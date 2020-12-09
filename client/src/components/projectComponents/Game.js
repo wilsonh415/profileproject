@@ -606,13 +606,13 @@ class Game extends React.Component {
                         row.map(col => {
                             const regularCellStyle = {
                                 border: "1px solid black",
-                                width: "35px",
-                                height: "35px"
+                                width: "36px",
+                                height: "36px"
                             };
                             const clickedCellStyle = {
                                 border: "1px solid black",
-                                width: "35px",
-                                height: "35px",
+                                width: "36px",
+                                height: "36px",
                                 backgroundColor: "white"
                             };
                             const blueStyle = {color: "blue"};
@@ -656,8 +656,8 @@ class Game extends React.Component {
 
     render() {
         const tableStyle = {
-            width: "350px",
-            height: "350px",
+            width: "360px",
+            height: "360px",
             backgroundColor: "lightgrey",
             margin: "0 auto"
         };
@@ -670,7 +670,7 @@ class Game extends React.Component {
             marginRight: "auto",
             marginBottom: "2vh",
             marginTop: "-2vh",
-            width: "520px",
+            width: "33vw",
             padding: "0px",
             background: "lightgrey",
             fontSize: "14px",
@@ -683,6 +683,7 @@ class Game extends React.Component {
                     <Card.Body style={{padding: "0px"}}>
                         <Card.Title><u>Game Information: </u></Card.Title>
                         <ul>
+                            <li>Each cell has a value indicating the # of surrounding mines.</li>
                             <li>There are <b>13</b> mines on the grid. Click one and you lose.</li>
                             <li>Cells left to clear: <b>{this.state.cellsLeft}</b></li>
                         </ul>

@@ -257,3 +257,31 @@
     max-height: 477px;
    }
  }
+
+ @media only screen and (min-width: 650px) {
+   .infoStyle {
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 2vh;
+     margin-top: -2vh;
+     width: 33vw;
+     padding: 0px;
+     background-color: lightgrey;
+     font-size: 14px;
+     font-family: Georgia;
+   }
+ }
+
+ @media only screen and (max-width: 650px) {
+  .infoStyle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+    margin-top: -2vh;
+    width: 70vw;
+    padding: 0px;
+    background: lightgrey;
+    font-size: 14px;
+    font-family: Georgia;
+  }
+}

@@ -665,22 +665,12 @@ class Game extends React.Component {
             fontFamily: "Georgia",
             fontSize: "36px"
         }
-        const infoStyle = {
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginBottom: "2vh",
-            marginTop: "-2vh",
-            width: "33vw",
-            padding: "0px",
-            background: "lightgrey",
-            fontSize: "14px",
-            fontFamily: "Georgia"
-        }
+        
         return (
             <div className="projectStyle">
                 <h2 style={titleStyle}><b>Minesweeper</b></h2> <br/>
-                <Card style={infoStyle}>
-                    <Card.Body style={{padding: "0px"}}>
+                <Card className="infoStyle">
+                    <Card.Body style={{padding: "0px", backgroundColor: "lightgrey"}}>
                         <Card.Title><u>Game Information: </u></Card.Title>
                         <ul>
                             <li>Each cell has a value indicating the # of surrounding mines.</li>

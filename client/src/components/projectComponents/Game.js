@@ -5,7 +5,8 @@ class Game extends React.Component {
     constructor() {
         super();
         this.state = {
-            grid: this.createGrid()
+            grid: this.createGrid(),
+            hasWon: false
         }
     }
 
@@ -114,12 +115,22 @@ class Game extends React.Component {
         return grid;
     }
 
+    checkMineExistence = (seenMines, x, y) => {
+        for(let i = 0; i < seenMines.length; i++) {
+            if(seenMines[i].randomX === x
+                && seenMines[i].randomY === y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     initializeMines = (grid) => {
         let seenMines = [];
         for(let k = 0; k < 13; k++) {
             let randomX = Math.floor(Math.random() * 10);
             let randomY = Math.floor(Math.random() * 10);
-            while(seenMines.indexOf({randomX, randomY}) !== -1) {
+            while(this.checkMineExistence(seenMines, randomX, randomY)) {
                 randomX = Math.floor(Math.random() * 10);
                 randomY = Math.floor(Math.random() * 10);
             }
@@ -127,15 +138,16 @@ class Game extends React.Component {
             grid[randomX][randomY].isMine = true;
             grid[randomX][randomY].neighbors = "💣";
         }
+        console.log(seenMines);
         return grid;
     }
 
     handleZeroClicked = (i, j) => {
-        // window.alert("ZERO IS CLICKED");
         // top left
         if(i === 0 && j === 0) {
             if(this.state.grid[i][j+1].neighbors === 0
                 && this.state.grid[i][j+1].isClicked === false) {
+                this.setClicked(this.state.grid[i][j+1]);
                 this.state.grid[i][j+1].isClicked = true;
                 this.handleZeroClicked(i, j+1);
             }
@@ -443,6 +455,24 @@ class Game extends React.Component {
         });
     }
 
+    checkWin = () => {
+        let count = 0;
+        this.state.grid.forEach(row => {
+            row.forEach(col => {
+                if(col.isClicked === true) {
+                    count++;
+                }
+            })
+        });
+        if(count === 87 && this.state.hasWon === false) {
+            window.alert("Congratulations! You've won.");
+            this.revealGrid();
+            this.setState({
+                hasWon: true
+            })
+        }
+    }
+
     mineClicked = (mineKey) => {
         this.state.grid.forEach((row, i) => {
             row.forEach((col, j) => {
@@ -457,6 +487,7 @@ class Game extends React.Component {
                     if(col.neighbors === 0) {
                         this.handleZeroClicked(i, j);
                     }
+                    this.checkWin();
                 }
             })
         });

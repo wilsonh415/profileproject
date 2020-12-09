@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 
 class Game extends React.Component {
     constructor() {
         super();
         this.state = {
             grid: this.createGrid(),
-            hasWon: false
+            hasWon: false,
+            cellsLeft: 87
         }
     }
 
@@ -557,6 +558,21 @@ class Game extends React.Component {
         }
     }
 
+    calculateMinesLeft = () => {
+        let clicked = 0;
+        this.state.grid.forEach(row => {
+            row.forEach(col => {
+                if(col.isClicked) {
+                    clicked++;
+                }
+            })
+        });
+        let leftover = (87 - clicked < 0) ? 0 : 87 - clicked;
+        this.setState({
+            cellsLeft: leftover
+        });
+    }
+
     mineClicked = (mineKey) => {
         this.state.grid.forEach((row, i) => {
             row.forEach((col, j) => {
@@ -579,6 +595,7 @@ class Game extends React.Component {
         this.setState({
             grid: this.state.grid
         });
+        this.calculateMinesLeft();
     }
 
     renderGrid = () => {
@@ -620,9 +637,29 @@ class Game extends React.Component {
             fontFamily: "Georgia",
             fontSize: "36px"
         }
+        const infoStyle = {
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: "2vh",
+            marginTop: "-2vh",
+            width: "520px",
+            padding: "0px",
+            background: "lightgrey",
+            fontSize: "14px",
+            fontFamily: "Georgia"
+        }
         return (
             <div className="projectStyle">
-                <h2 style={titleStyle}>Minesweeper</h2> <br/>
+                <h2 style={titleStyle}><b>Minesweeper</b></h2> <br/>
+                <Card style={infoStyle}>
+                    <Card.Body style={{padding: "0px"}}>
+                        <Card.Title><u>Game Information: </u></Card.Title>
+                        <ul>
+                            <li>There are <b>13</b> mines on the grid. Click one and you lose.</li>
+                            <li>Cells left to clear: <b>{this.state.cellsLeft}</b></li>
+                        </ul>
+                    </Card.Body>
+                </Card>
                 <table style={tableStyle}>
                     <tbody>
                     { (this.state.grid !== null) ? this.renderGrid() : null}

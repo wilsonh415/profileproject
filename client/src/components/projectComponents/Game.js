@@ -604,14 +604,24 @@ class Game extends React.Component {
                 <tr key={index} height={35}>
                     {
                         row.map(col => {
-                            const cellStyle = {
+                            const regularCellStyle = {
                                 border: "1px solid black",
                                 width: "35px",
                                 height: "35px"
                             }
+                            const clickedCellStyle = {
+                                border: "1px solid black",
+                                width: "35px",
+                                height: "35px",
+                                backgroundColor: "white"
+                            }
                             // "💣"
                             return (
-                                <td key={col.key} style={cellStyle} onClick={() => this.mineClicked(col.key)}>
+                                (col.isClicked) ?
+                                <td key={col.key} style={clickedCellStyle}>
+                                    {col.neighbors}
+                                </td> :
+                                <td key={col.key} style={regularCellStyle} onClick={() => this.mineClicked(col.key)}>
                                     {(col.isClicked) ? col.neighbors : null}
                                 </td>
                             )

@@ -15,7 +15,6 @@ class Home extends React.Component {
             <div className="homeStyle">
                 <h1 style={styles}>
                     Hi, I'm Wilson. Welcome to my website!
-                    It is still a work in progress.
                 </h1>
             </div>
         )

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page changes when "Locate ISS!" is clicked 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "white",
+      "border": "1px solid",
+      "borderRadius": "5px",
+      "marginBottom": "5vh",
+      "maxHeight": "477px",
+      "maxWidth": "286px",
+      "minHeight": "477px",
+      "minWidth": "286px",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="card"
+  >
+    <img
+      className="card-img-top"
+      height={180}
+      src="issfoto.jpeg"
+      width={286}
+    />
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        <b>
+          Where is the International Space Station (ISS)?
+        </b>
+      </div>
+      <b>
+        <hr />
+      </b>
+      <p
+        className="card-text"
+      >
+        Launched in November 20, 1998, the ISS orbits the Earth every 93 minutes.
+      </p>
+      <b>
+        <hr />
+      </b>
+      <a
+        className="nav-link"
+        href="/Iss"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          type="button"
+        >
+          Locate ISS!
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;

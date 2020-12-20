@@ -12,3 +12,10 @@ test('Resume component renders correctly', () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+test('Correct headers', () => {
+    const component = shallow(<Resume></Resume>);
+    let titles = component.find('h2');
+    // two titles, one for Education, other for Exprience
+    expect(titles.length).toEqual(2);
+});

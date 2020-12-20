@@ -12,3 +12,9 @@ test('Random page renders correctly', () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+test('Correct titles on page', () => {
+    const component = shallow(<Random></Random>);
+    let title = component.find('h3').text();
+    expect(title).toEqual("Favorite Albums");
+});

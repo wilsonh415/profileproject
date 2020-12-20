@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pics components rendered properly 1`] = `
+<div>
+  <h3
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "Georgia",
+        "fontSize": "35px",
+        "marginLeft": "7vw",
+        "marginTop": "10vh",
+        "textAlign": "left",
+      }
+    }
+  >
+    <b>
+      My Pictures
+    </b>
+  </h3>
+  <h6
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "Georgia",
+        "fontSize": "16px",
+        "marginLeft": "7vw",
+        "textAlign": "left",
+      }
+    }
+  >
+    Click on photos to expand and for specific location!
+  </h6>
+  <div
+    className="row"
+    style={
+      Object {
+        "fontFamily": "Georgia",
+        "marginLeft": "0vw",
+        "position": "relative",
+        "top": "3vh",
+      }
+    }
+  >
+    <div
+      className="col-md-5"
+      style={
+        Object {
+          "marginLeft": "4vw",
+          "position": "relative",
+        }
+      }
+    >
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="LandsEnd.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="SutroBaths.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="PalaceOfFineArts.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="InaCoolbrithPark.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="LakeMerced.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="DoloresPark.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="CrissyFields.jpg"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="GoldenGatePark.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <img
+        className=""
+        height={110}
+        onClick={[Function]}
+        src="TwinPeaks.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={110}
+      />
+      <b>
+        <p
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "color": "white",
+              "fontSize": "19px",
+              "margin": "3vh auto",
+              "position": "relative",
+              "width": "270px",
+            }
+          }
+        >
+          My Hometown - San Francisco
+        </p>
+      </b>
+    </div>
+    <div
+      className="col-md-5"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="OldFaithful.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="BoysenStatePark.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="Yellowstone.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="GrandTeton.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <b>
+        <p
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "color": "white",
+              "fontSize": "19px",
+              "margin": "3vh auto",
+              "position": "relative",
+              "width": "270px",
+            }
+          }
+        >
+          Wyoming
+        </p>
+      </b>
+    </div>
+  </div>
+  <div
+    className="row"
+    style={
+      Object {
+        "fontFamily": "Georgia",
+        "marginLeft": "0vw",
+        "position": "relative",
+        "top": "3vh",
+      }
+    }
+  >
+    <div
+      className="col-md-5"
+      style={
+        Object {
+          "marginLeft": "4vw",
+          "position": "relative",
+        }
+      }
+    >
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="BadlandsInterior.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="TheBadlands.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="PioneerAutoMuseum.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="CusterStatePark.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <b>
+        <p
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "color": "white",
+              "fontSize": "19px",
+              "margin": "3vh auto",
+              "position": "relative",
+              "width": "270px",
+            }
+          }
+        >
+          South Dakota
+        </p>
+      </b>
+    </div>
+    <div
+      className="col-md-5"
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="CentralPark.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="TimesSquare.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="BrooklynBridge.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <img
+        className=""
+        height={165}
+        onClick={[Function]}
+        src="Tarrytown.JPG"
+        style={
+          Object {
+            "border": "2px solid white",
+          }
+        }
+        width={165}
+      />
+      <b>
+        <p
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "color": "white",
+              "fontSize": "19px",
+              "margin": "3vh auto",
+              "position": "relative",
+              "width": "270px",
+            }
+          }
+        >
+          New York
+        </p>
+      </b>
+    </div>
+  </div>
+</div>
+`;

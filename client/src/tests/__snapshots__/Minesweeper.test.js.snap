@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Minesweeper component rendererd properly 1`] = `
+<div
+  className="msCardClass"
+>
+  <div
+    className="card"
+  >
+    <img
+      className="card-img-top"
+      height={180}
+      src="minesweeperimg.png"
+      width={286}
+    />
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        <b>
+          Minesweeper
+        </b>
+      </div>
+      <b>
+        <hr />
+      </b>
+      <p
+        className="card-text"
+      >
+        <b>
+          Rules
+        </b>
+        : Clear every safe tile without selecting a mine and you win. Each safe tile will have a number indicating the number of mines around it. Choose carefully. Good luck.
+      </p>
+      <b>
+        <hr />
+      </b>
+      <a
+        className="nav-link"
+        href="/Minesweeper"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          type="button"
+        >
+          Play now!
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;

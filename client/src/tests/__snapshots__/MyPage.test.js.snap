@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyPage component renders correctly 1`] = `
+<div
+  className="thePage"
+>
+  <div
+    className="bgBlock"
+  />
+  <div
+    className="navigationBar"
+  >
+    <nav
+      className="navbar navbar-expand navbar-light bg-lightgrey"
+    >
+      <div
+        className="border-left mx-auto navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="nav-link"
+          data-rb-event-key="/Resume"
+          href="/Resume"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <b
+            style={
+              Object {
+                "backgroundColor": "skyblue",
+                "color": "black",
+                "fontFamily": "Palatino Linotype",
+                "fontSize": "21px",
+                "marginRight": "2vw",
+                "opacity": 0.9,
+              }
+            }
+          >
+            Resume
+          </b>
+        </a>
+        <a
+          className="nav-link"
+          data-rb-event-key="/Projects"
+          href="/Projects"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <b
+            style={
+              Object {
+                "backgroundColor": "skyblue",
+                "color": "black",
+                "fontFamily": "Palatino Linotype",
+                "fontSize": "21px",
+                "marginRight": "2vw",
+                "opacity": 0.9,
+              }
+            }
+          >
+            Projects
+          </b>
+        </a>
+        <a
+          className="nav-link"
+          data-rb-event-key="/Random"
+          href="/Random"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <b
+            style={
+              Object {
+                "backgroundColor": "skyblue",
+                "color": "black",
+                "fontFamily": "Palatino Linotype",
+                "fontSize": "21px",
+                "marginRight": "2vw",
+                "opacity": 0.9,
+              }
+            }
+          >
+            Random
+          </b>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div
+    className="homeStyle"
+  >
+    <h1
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "Georgia",
+          "fontSize": "45px",
+          "marginLeft": "10vw",
+          "marginRight": "10vw",
+          "position": "relative",
+          "top": "19%",
+        }
+      }
+    >
+      Hi, I'm Wilson. Welcome to my website!
+    </h1>
+  </div>
+</div>
+`;

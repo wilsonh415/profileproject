@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders correctly 1`] = `
+<div
+  className="homeStyle"
+>
+  <h1
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "Georgia",
+        "fontSize": "45px",
+        "marginLeft": "10vw",
+        "marginRight": "10vw",
+        "position": "relative",
+        "top": "19%",
+      }
+    }
+  >
+    Hi, I'm Wilson. Welcome to my website!
+  </h1>
+</div>
+`;

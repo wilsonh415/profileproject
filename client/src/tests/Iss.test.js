@@ -3,7 +3,7 @@ import IssCard from '../components/projectComponents/IssCard';
 import renderer from 'react-test-renderer';
 
 // snapshot test
-test('Page changes when "Locate ISS!" is clicked', () => {
+test('ISS component properly rendered', () => {
     const component = renderer.create(
         <IssCard></IssCard>
     );

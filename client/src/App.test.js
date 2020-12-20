@@ -7,6 +7,6 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-test('App renders Bio', () => {
+test('App renders', () => {
   const component = shallow(<App></App>);
 });

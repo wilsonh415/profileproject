@@ -14,8 +14,6 @@ class NavbarComp extends React.Component {
        return(
            <div className="navigationBar">
                <Navbar bg="lightgrey" variant="light">
-                   {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
-                   {/* <Nav className="mx-auto p-2"> */}
                    <Nav className="border-left mx-auto">
                        <Nav.Link href="/Resume"><b style={styleText}>Resume</b></Nav.Link>
                        <Nav.Link href="/Projects"><b style={styleText}>Projects</b></Nav.Link>

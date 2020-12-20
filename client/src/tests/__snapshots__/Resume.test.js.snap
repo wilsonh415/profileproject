@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resume component renders correctly 1`] = `
+<div
+  className="resumeStyle"
+>
+  <h2
+    style={
+      Object {
+        "backgroundColor": "skyblue",
+        "clear": "both",
+        "float": "left",
+        "fontFamily": "Georgia",
+        "fontSize": "30px",
+        "marginLeft": "6vw",
+        "position": "relative",
+        "top": "3vh",
+      }
+    }
+  >
+    <b>
+      Education
+    </b>
+  </h2>
+  <div
+    style={
+      Object {
+        "clear": "both",
+        "marginLeft": "5vw",
+        "position": "relative",
+        "top": "5vh",
+        "width": "44vw",
+      }
+    }
+  >
+    <div
+      className="accordion"
+    >
+      <div
+        className="card"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": "35px",
+            "flexDirection": "row",
+            "float": "left",
+            "marginBottom": "5vh",
+            "maxHeight": "28vh",
+            "minHeight": "22vh",
+            "minWidth": "38vw",
+          }
+        }
+      >
+        <img
+          className="card-img-left"
+          src="cplogo.jpeg"
+          style={
+            Object {
+              "height": "120px",
+              "marginLeft": "10px",
+              "marginRight": "15px",
+              "marginTop": "10px",
+              "width": "120px",
+            }
+          }
+        />
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-title h5"
+            style={
+              Object {
+                "float": "left",
+                "fontFamily": "Georgia",
+                "fontSize": "20px",
+              }
+            }
+          >
+            <a
+              href="https://www.calpoly.edu/"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "black",
+                  "textDecoration": "none",
+                }
+              }
+              target="_blank"
+            >
+              <b>
+                California Polytechnic State 
+                <br />
+                University, San Luis Obispo
+              </b>
+            </a>
+          </div>
+          <br />
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+              }
+            }
+          >
+              San Luis Obispo, CA   
+            <b>
+              |
+            </b>
+               Sep 2017 - Present
+          </p>
+          <br />
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+              }
+            }
+          >
+              B.S. in Computer Science
+          </p>
+        </div>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <b>
+            &gt;
+          </b>
+        </button>
+        <div
+          aria-expanded={null}
+          className="collapse"
+        >
+          <div
+            className="card-body"
+          >
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <b>
+                <u>
+                  Relevant Coursework:
+                </u>
+              </b>
+              <br />
+              <ul
+                style={
+                  Object {
+                    "fontSize": "9px",
+                    "textAlign": "left",
+                  }
+                }
+              >
+                <li>
+                  Design & Implementation of Databases
+                </li>
+                <li>
+                  Design & Analysis of Algorithms
+                </li>
+                <li>
+                  Theory of Computation
+                </li>
+                <li>
+                  Operating Systems
+                </li>
+                <li>
+                  Statistics with R
+                </li>
+                <li>
+                  User-Centered Interface & Design
+                </li>
+                <li>
+                  Human Computer Interaction
+                </li>
+                <li>
+                  OOP & Data Structures
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": "5vw",
+        "position": "relative",
+        "top": "5vh",
+        "width": "44vw",
+      }
+    }
+  >
+    <div
+      className="accordion"
+    >
+      <div
+        className="card"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": "35px",
+            "flexDirection": "row",
+            "float": "left",
+            "marginBottom": "5vh",
+            "maxHeight": "28vh",
+            "minHeight": "22vh",
+            "minWidth": "38vw",
+          }
+        }
+      >
+        <img
+          className="card-img-left"
+          src="lowelllogo.png"
+          style={
+            Object {
+              "height": "100px",
+              "marginLeft": "20px",
+              "marginRight": "25px",
+              "marginTop": "20px",
+              "width": "100px",
+            }
+          }
+        />
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-title h5"
+            style={
+              Object {
+                "float": "left",
+                "fontFamily": "Georgia",
+                "fontSize": "20px",
+              }
+            }
+          >
+            <a
+              href="https://en.wikipedia.org/wiki/Lowell_High_School_(San_Francisco)"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "black",
+                  "textDecoration": "none",
+                }
+              }
+              target="_blank"
+            >
+              <b>
+                Lowell High School
+              </b>
+            </a>
+          </div>
+          <br />
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+              }
+            }
+          >
+            San Francisco, CA   
+            <b>
+              |
+            </b>
+               Aug 2013 - May 2017
+          </p>
+          <br />
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+              }
+            }
+          >
+            11 Advanced Placement Classes
+          </p>
+        </div>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <b>
+            &gt;
+          </b>
+        </button>
+        <div
+          aria-expanded={null}
+          className="collapse"
+        >
+          <div
+            className="card-body"
+          >
+            <div>
+              <p
+                style={
+                  Object {
+                    "fontSize": "9px",
+                  }
+                }
+              >
+                Lowell High School is a selective 
+                <br />
+                public magnet school where admission
+                <br />
+                tests are necessary for enrollment.
+              </p>
+              <b>
+                <u>
+                  Relevant Coursework:
+                </u>
+              </b>
+              <ul
+                style={
+                  Object {
+                    "fontSize": "9px",
+                    "textAlign": "left",
+                  }
+                }
+              >
+                <li>
+                  AP Computer Science
+                </li>
+                <li>
+                  AP Computer Science Principles
+                </li>
+                <li>
+                  AP Psychology
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": "5vw",
+        "position": "relative",
+        "top": "8vh",
+        "width": "44vw",
+      }
+    }
+  >
+    <h2
+      style={
+        Object {
+          "backgroundColor": "skyblue",
+          "clear": "both",
+          "float": "left",
+          "fontFamily": "Georgia",
+          "fontSize": "30px",
+          "marginBottom": "3vh",
+          "marginLeft": "1vw",
+          "position": "relative",
+        }
+      }
+    >
+      <b>
+        Experience
+      </b>
+    </h2>
+    <div
+      className="accordion"
+    >
+      <div
+        className="card"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": "35px",
+            "flexDirection": "row",
+            "float": "left",
+            "marginBottom": "5vh",
+            "maxHeight": "28vh",
+            "minHeight": "22vh",
+            "minWidth": "38vw",
+          }
+        }
+      >
+        <img
+          className="card-img-left"
+          src="llnllogo.jpeg"
+          style={
+            Object {
+              "height": "73px",
+              "marginLeft": "33px",
+              "marginTop": "35px",
+              "width": "73px",
+            }
+          }
+        />
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-title h5"
+            style={
+              Object {
+                "fontFamily": "Georgia",
+                "fontSize": "20px",
+              }
+            }
+          >
+            <a
+              href="https://www.llnl.gov/"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "black",
+                  "textDecoration": "none",
+                }
+              }
+              target="_blank"
+            >
+              <b>
+                Lawrence Livermore 
+                <br />
+                National Laboratory
+              </b>
+            </a>
+          </div>
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+                "marginLeft": "39px",
+              }
+            }
+          >
+            Livermore, CA   
+            <b>
+              |
+            </b>
+               Apr 2019 - Aug 2019
+          </p>
+          <br />
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+                "marginLeft": "39px",
+              }
+            }
+          >
+            Computation Student Scholar
+          </p>
+        </div>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <b>
+            &gt;
+          </b>
+        </button>
+        <div
+          aria-expanded={null}
+          className="collapse"
+          style={
+            Object {
+              "maxWidth": "30vw",
+            }
+          }
+        >
+          <div
+            className="card-body"
+          >
+            <div>
+              <b>
+                <u>
+                  Responsibilities:
+                </u>
+              </b>
+              <ul
+                style={
+                  Object {
+                    "fontSize": "10px",
+                    "textAlign": "left",
+                  }
+                }
+              >
+                <li>
+                  Developed & designed a rationalization app for department directors at the lab, which consisted of a complex updateable ledger (table of accounting data) with the use of ag-Grid.
+                </li>
+                <li>
+                  Implemented various system features for our admin pages, some of which included options to lock users out, post system messages, and give updates regarding the status of our finance application.
+                </li>
+                <li>
+                  Updated and remodeled many of the finance department's SPAs (single-page applications) from AngularJS to Angular.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "marginLeft": "5vw",
+        "position": "relative",
+        "top": "8vh",
+        "width": "44vw",
+      }
+    }
+  >
+    <div
+      className="accordion"
+    >
+      <div
+        className="card"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": "35px",
+            "flexDirection": "row",
+            "float": "left",
+            "marginBottom": "5vh",
+            "maxHeight": "28vh",
+            "minHeight": "22vh",
+            "minWidth": "38vw",
+          }
+        }
+      >
+        <img
+          className="card-img-left"
+          src="sfologo.png"
+          style={
+            Object {
+              "height": "110px",
+              "marginLeft": "20px",
+              "marginRight": "10px",
+              "marginTop": "15px",
+              "width": "90px",
+            }
+          }
+        />
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-title h5"
+            style={
+              Object {
+                "fontFamily": "Georgia",
+                "fontSize": "20px",
+              }
+            }
+          >
+            <a
+              href="https://sfoconnect.com/"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "black",
+                  "textDecoration": "none",
+                }
+              }
+              target="_blank"
+            >
+              <b>
+                City & County of San Francisco 
+                <br />
+                 (SFO Airport - ITT Office)
+              </b>
+            </a>
+          </div>
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+                "marginLeft": "10px",
+              }
+            }
+          >
+            San Francisco, CA   
+            <b>
+              |
+            </b>
+               Jun 2017 - Aug 2017
+          </p>
+          <br />
+          <p
+            className="card-text"
+            style={
+              Object {
+                "clear": "both",
+                "float": "left",
+                "fontFamily": "Raleway",
+                "fontSize": "15px",
+                "marginLeft": "10px",
+              }
+            }
+          >
+            Public Service Trainee (SWE Intern)
+          </p>
+        </div>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <b>
+            &gt;
+          </b>
+        </button>
+        <div
+          aria-expanded={null}
+          className="collapse"
+          style={
+            Object {
+              "maxWidth": "30vw",
+            }
+          }
+        >
+          <div
+            className="card-body"
+          >
+            <div>
+              <b>
+                <u>
+                  Responsibilities:
+                </u>
+              </b>
+              <ul
+                style={
+                  Object {
+                    "fontSize": "10px",
+                    "textAlign": "left",
+                  }
+                }
+              >
+                <li>
+                  Wrote unit tests in Java and ensured code coverage for the checkpoint wait time team with the use of Jenkins.
+                </li>
+                 
+                <br />
+                <li>
+                  Collected Wi-Fi access point data and developed algorithms to determine the faulty or problematic access points.
+                </li>
+                 
+                <br />
+                <li>
+                  Learned about RESTful APIs and the development of web services.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Page changes when "Locate ISS!" is clicked 1`] = `
+exports[`ISS component properly rendered 1`] = `
 <div
   style={
     Object {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Resume component renders correctly 1`] = `
+exports[`Resume component rendered properly 1`] = `
 <div
   className="resumeStyle"
 >

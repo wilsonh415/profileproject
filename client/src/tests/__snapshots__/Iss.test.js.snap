@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ISS component properly rendered 1`] = `
+exports[`ISS component rendered properly 1`] = `
 <div
   style={
     Object {

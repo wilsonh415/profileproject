@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyPage component renders correctly 1`] = `
+exports[`MyPage component renders properly 1`] = `
 <div
   className="thePage"
 >

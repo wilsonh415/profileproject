@@ -7,13 +7,13 @@ import renderer from 'react-test-renderer';
 configure({ adapter: new Adapter() });
 
 
-test('Resume component renders correctly', () => {
+test('Resume component rendered properly', () => {
     const component = renderer.create(<Resume></Resume>);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 });
 
-test('Correct headers', () => {
+test('Correct headers on Resume component', () => {
     const component = shallow(<Resume></Resume>);
     let titles = component.find('h2');
     // two titles, one for Education, other for Exprience

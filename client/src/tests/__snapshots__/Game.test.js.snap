@@ -1,0 +1,1123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game components renders properly 1`] = `
+<div
+  className="projectStyle"
+>
+  <h2
+    style={
+      Object {
+        "fontFamily": "Georgia",
+        "fontSize": "36px",
+      }
+    }
+  >
+    <b>
+      Minesweeper
+    </b>
+  </h2>
+   
+  <br />
+  <div
+    className="infoStyle card"
+  >
+    <div
+      className="card-body"
+      style={
+        Object {
+          "backgroundColor": "lightgrey",
+          "padding": "0px",
+        }
+      }
+    >
+      <div
+        className="card-title h5"
+      >
+        <u>
+          Game Information: 
+        </u>
+      </div>
+      <ul>
+        <li>
+          Each cell has a value indicating the # of surrounding mines.
+        </li>
+        <li>
+          There are 
+          <b>
+            13
+          </b>
+           mines on the grid. Click one and you lose.
+        </li>
+        <li>
+          Cells left to clear: 
+          <b>
+            87
+          </b>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <table
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+        "height": "360px",
+        "margin": "0 auto",
+        "width": "360px",
+      }
+    }
+  >
+    <tbody>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+      <tr
+        height={35}
+      >
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+        <td
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "1px solid black",
+              "height": "36px",
+              "width": "36px",
+            }
+          }
+        />
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Restart!
+  </button>
+</div>
+`;

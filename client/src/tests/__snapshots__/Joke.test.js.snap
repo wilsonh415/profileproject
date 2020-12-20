@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Joke component rendered properly 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "white",
+      "border": "1px solid",
+      "borderRadius": "5px",
+      "fontFamily": "Georgia",
+      "marginBottom": "5vh",
+      "maxWidth": "286px",
+      "minWidth": "286px",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="card"
+  >
+    <img
+      className="card-img-top"
+      height={180}
+      src="laughing.jpg"
+      width={286}
+    />
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        <b>
+          Random Jokes!
+        </b>
+      </div>
+      <p
+        className="card-text"
+      >
+        Lighten up your day with a laugh!
+      </p>
+      <p
+        className="card-text"
+        style={
+          Object {
+            "fontSize": "9px",
+            "marginTop": "-2vh",
+          }
+        }
+      >
+        <b
+          style={
+            Object {
+              "fontSize": "10px",
+            }
+          }
+        >
+          NOTE
+        </b>
+        : Some jokes may be offensive and inappropriate. This API was created by Sv443 (Sven Fehler)
+      </p>
+      <b>
+        <hr />
+      </b>
+      <p
+        className="card-text"
+        style={
+          Object {
+            "fontSize": "11px",
+          }
+        }
+      >
+        <b>
+          Joke Type: 
+        </b>
+      </p>
+      <p
+        className="card-text"
+      >
+        <b />
+        <br />
+      </p>
+      <b>
+        <hr />
+      </b>
+    </div>
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "marginBottom": "2vh",
+          "marginLeft": "29%",
+          "width": "120px",
+        }
+      }
+      type="button"
+    >
+      New Joke!
+    </button>
+  </div>
+</div>
+`;

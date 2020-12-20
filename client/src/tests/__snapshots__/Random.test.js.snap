@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Random page renders correctly 1`] = `
+exports[`Random page rendered properly 1`] = `
 <div
   className="randomStyle"
 >

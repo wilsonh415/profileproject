@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 
 configure({ adapter: new Adapter() });
 
-test('MyPage component renders properly', () => {
+test('MyPage component rendered properly', () => {
     const component = renderer.create(<MyPage></MyPage>);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

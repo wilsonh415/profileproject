@@ -12,3 +12,9 @@ test('IssCard component rendered properly', () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+test('ISS button text is correct', () => {
+    const component = shallow(<IssCard></IssCard>);
+    let buttonText = component.find('Button').text();
+    expect(buttonText).toEqual("Locate ISS!");
+});

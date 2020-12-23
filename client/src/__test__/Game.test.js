@@ -13,6 +13,12 @@ test('Game components renders properly', () => {
     expect(tree).toMatchSnapshot();
 });
 
+test('Title is correct', () => {
+    const component = shallow(<Game></Game>);
+    let title = component.find('h2').text();
+    expect(title).toEqual("Minesweeper");
+});
+
 // test('Generate grid for minesweeper', () => {
 //     const component = renderer.create(<Game></Game>);
 //     let tree = component.toJSON();

@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
+    "enzyme-to-json": "^3.6.1",
     "leaflet": "^1.7.1",
     "react": "^17.0.1",
     "react-avatar-editor": "^11.0.12",

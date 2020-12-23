@@ -7,11 +7,10 @@ import renderer from 'react-test-renderer';
 
 configure({ adapter: new Adapter() });
 
-// test('Bio component renders correctly', () => {
-//     const component = renderer.create(<Bio></Bio>);
-//     let tree = component.toJSON();
-//     expect(tree).toMatchSnapshot();
-// });
+test("Bio component renders properly", () => {
+    const component = shallow(<Bio></Bio>);
+    expect(JSON.stringify(component)).toMatchSnapshot();
+});
 
 test('Name in Bio component is correct', () => {
     const component = shallow(<Bio></Bio>);

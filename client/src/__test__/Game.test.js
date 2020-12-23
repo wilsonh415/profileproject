@@ -12,3 +12,10 @@ test('Game components renders properly', () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+// test('Generate grid for minesweeper', () => {
+//     const component = renderer.create(<Game></Game>);
+//     let tree = component.toJSON();
+//     let grid = tree.props.createGrid();
+//     expect(grid.length).toEqual(10);
+// });

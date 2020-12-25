@@ -20,7 +20,7 @@ class Joke extends React.Component {
         const data = await resp.json();
         // need to filter out the offensive/inappropriate jokes
         const filterWords = ["sex", "penis", "FAT", "fat", "cancer", "shitty",
-        "masturbating", "masturbated", "anal", "jacking", "Alzheimer's"];
+        "masturbating", "masturbated", "anal", "gay", "jacking", "Alzheimer's"];
         let isBad = false;
         if(data.joke !== undefined) {
             let wordCheck = filterWords.map(w => data.joke.includes(w));
@@ -35,11 +35,12 @@ class Joke extends React.Component {
                 isBad = true;
             }
         }
-        if(data.category === "Dark" || data.category === "Miscellaneous" || isBad) {
+        if(data.category === "Dark" || data.category === "Misc" ||
+        data.category === "Miscellaneous" || isBad) {
             this.getJokes();
         }
-        if(data.joke !== undefined && data.category !== "Dark" 
-        && data.category !== "Miscellaneous" && isBad === false) {
+        if(data.joke !== undefined && data.category !== "Dark" && data.category !== "Misc"
+        && data.category !== "Miscellaneous" && isBad === false ) {
             this.setState({
                 joke: data.joke,
                 category: data.category,
@@ -48,7 +49,7 @@ class Joke extends React.Component {
             })
         }
         if(data.setup !== undefined && data.delivery !== undefined && isBad === false
-            && data.category !== "Dark" && data.category !== "Miscellaneous") {
+            && data.category !== "Dark" && data.category !== "Miscellaneous" && data.category !== "Misc") {
             this.setState({
                 jokeSetup: data.setup,
                 jokeDelivery: data.delivery,

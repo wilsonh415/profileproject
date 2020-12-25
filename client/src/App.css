@@ -212,6 +212,7 @@
   .spacePhotoStyle {
     background-color: white;
     border: 1px solid;
+    border-radius: 5px;
     min-width: 286px;
     margin-left: 30vw;
     position: absolute;
@@ -250,6 +251,7 @@
    .msCardClass {
     background-color: white;
     border: 1px solid;
+    border-radius: 5px;
     min-width: 286px;
     max-width: 286px;
     margin-left: 30vw;

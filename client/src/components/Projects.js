@@ -31,8 +31,8 @@ class Projects extends React.Component {
                     <SpacePhoto></SpacePhoto>
                 </Row> 
                 <Row style={rowTwo}>
-                    <Joke></Joke>
                     <Minesweeper></Minesweeper>
+                    <Joke></Joke>
                 </Row>
                 <br/>
            </div>

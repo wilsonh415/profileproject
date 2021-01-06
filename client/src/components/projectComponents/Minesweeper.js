@@ -13,8 +13,8 @@ class Minesweeper extends React.Component {
                         <Card.Title><b>Minesweeper</b></Card.Title>
                         <b><hr/></b>
                         <Card.Text>
-                            <b>Rules</b>: Clear every safe tile without
-                            selecting a mine and you win. Each safe tile will have a
+                            <b>Rules</b>: Clear every tile without selecting
+                            a mine and you win. Each "safe" tile will have a
                             number indicating the number of mines around it. Choose carefully. Good luck.
                         </Card.Text>
                         <b><hr/></b>

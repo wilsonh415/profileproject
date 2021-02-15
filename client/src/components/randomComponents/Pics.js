@@ -162,7 +162,7 @@ class Pics extends React.Component {
             margin: "auto",
             border: "2px solid white",
             height: (this.state.windowWidth >= 900) ? "55vh" : "50%",
-            width: (this.state.windowWidth >= 900) ? "50vw" : "80%"
+            width: (this.state.windowWidth >= 900) ? "45vw" : "80%"
         };
         const modalText = { 
             textAlign: "center",
